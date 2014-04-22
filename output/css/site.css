@@ -8175,7 +8175,7 @@ header.cover {
     margin-top: 20px;
     font-size: 13px;
     font-weight: 500; }
-    .content.formula nav .scratchpad-share p, .content.video nav .scratchpad-share p {
+    .content.formula nav .scratchpad-share span, .content.video nav .scratchpad-share span {
       display: inline-block;
       font-weight: 500;
       float: left;
