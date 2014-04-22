@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta charset='utf-8'>
+    <title></title>
+    <link href='/css/site.css' rel='stylesheet'>
+  </head>
+  <body class='full-page no-js'>
+    <script>
+      document.body.classList.remove('no-js');
+    </script>
+    <div class='container'>
+      <div class='row'>
+        <div class='side-nav'>
+          <div class='logo'>
+            <a href='/'>
+              <img alt='Learn Ionic Framework' height='43' src='/img/learn-ionicframework@2x.png' width='194'>
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a class='active' href='/videos/'>
+                  <i class='ion-videos'></i>
+                  <p>Videos</p>
+                </a>
+              </li>
+              <li>
+                <a href='/formulas/'>
+                  <i class='ion-formulas'></i>
+                  <p>Formulas</p>
+                </a>
+              </li>
+              <li>
+                <a href='/scratchpad/'>
+                  <i class='ion-scratchpad'></i>
+                  <p>Scratchpad</p>
+                </a>
+              </li>
+              <li>
+                <a href='/resources/'>
+                  <i class='ion-resources'></i>
+                  <p>Resources</p>
+                </a>
+              </li>
+            </ul>
+            <footer>
+              <ul>
+                <li>
+                  <a href='https://github.com/driftyco/ionic-learn/issues/new'>
+                    <i class='ion-suggestions'></i>
+                    <p>Suggest a Topic</p>
+                  </a>
+                </li>
+                <li>
+                  <a href='http://forum.ionicframework.com/'>
+                    <i class='ion-forum'></i>
+                    <p>Forums</p>
+                  </a>
+                </li>
+                <li>
+                  <a href='https://github.com/driftyco/ionic'>
+                    <i class='ion-github'></i>
+                    <p>Github</p>
+                  </a>
+                </li>
+                <li>
+                  <a href='https://twitter.com/ionicframework'>
+                    <i class='ion-twitter'></i>
+                    <p>Twitter</p>
+                  </a>
+                </li>
+                <li>
+                  <a href='https://plus.google.com/+Ionicframework/posts'>
+                    <i class='ion-googleplus'></i>
+                    <p>G+</p>
+                  </a>
+                </li>
+              </ul>
+            </footer>
+          </nav>
+        </div>
+        <div class='main-pane'>
+          <div class='content video'>
+            <nav>
+              <a class='left' href='/videos/'>
+                <i class='ion-chevron-left'></i>
+                All Videos
+              </a>
+              <a class='right scratchpad-share' href='/scratchpad'>
+                Open Scratchpad
+                <i class='ion-share'></i>
+              </a>
+            </nav>
+            <article>
+              <header>
+                <h1>H1: Video Introduction to Ionic Framework</h1>
+                <div class='byline'>
+                  <img src='http://placehold.it/30x30'>
+                  <span class='author'>
+                    Written by
+                    <a href='#'>Gerred Dillon</a>
+                  </span>
+                  <time>April 22, 2014</time>
+                </div>
+              </header>
+              <iframe allowfullscreen='' frameborder='0' height='505' src='//www.youtube.com/embed/1RQCjwnlTRk?hd=1' width='847'></iframe>
+              <ul class='nav nav-tabs'>
+                <li class='active'>
+                  <a data-toggle='tab' href='#details'>Details</a>
+                </li>
+                <li>
+                  <a data-toggle='tab' href='#transcript'>Transcript</a>
+                </li>
+                <li>
+                  <a data-toggle='tab' href='#similar-videos'>Similar Videos</a>
+                </li>
+                <li>
+                  <a data-toggle='tab' href='#scratchpad'>Scratchpad</a>
+                </li>
+              </ul>
+              <div class='tab-content'>
+                <div class='tab-pane active' id='details'>
+                  <p>Consectetur sequi ducimus laboriosam non vel quos, laudantium doloribus. Voluptatibus quaerat tempora nesciunt laborum accusantium! Iste hic reiciendis error itaque maxime. Exercitationem molestias aliquam incidunt adipisci voluptatem amet. Totam omnis quibusdam a hic tempore quas vitae, aperiam temporibus accusantium voluptatem. Iste delectus corporis temporibus maiores earum, beatae repudiandae? Id odio!</p>
+                  
+                  <p>Lorem voluptatem laboriosam maiores consequatur ab? Vero ut temporibus dignissimos quisquam nulla voluptates atque. Soluta voluptatem eligendi recusandae optio necessitatibus.</p>
+                  
+                  <p><code>ruby
+                  def foo
+                    return "hi"
+                  end
+                  </code></p>
+                </div>
+                <div class='tab-pane' id='transcript'>
+                  <h1 id="getting-started">Getting Started</h1>
+                  
+                  <h2 id="intro">Intro</h2>
+                  
+                  <p>In this video we will learn about Ionic Framework for iOS development. Ionic Framework is a front-end framework for developing hybrid mobile apps with HTML5.</p>
+                  
+                  <h2 id="prerequisites">Prerequisites</h2>
+                  
+                  <p>To start using Ionic with iOS, you will need MacOSX with XCode, the XCode Command Line Tools, and node.js installed. Instructions for installing these pre-requisites are in the notes for this video.</p>
+                  
+                  <h2 id="node-modules">Node Modules</h2>
+                  
+                  <p>Once you finish installing the pre-requisites, install Ionic from the Node Package Manager (NPM). If you are new to Node.js, NPM is a package manager for node.js that will resolve your dependencies. Install Ionic now with <code>npm install -g ionic cordova ios-sim</code>.</p>
+                  
+                  <h2 id="explain-modules">Explain Modules</h2>
+                  <p>These modules are the basis for working with Ionic on iOS. The <code>ionic</code> module itself is the primary command line tool you will be working with. Cordova is Ionic's underlying platform for building native mobile applications using HTML, CSS, and JavaScript. The <code>ios-sim</code> module allows us to run the iOS simulator from the command line.</p>
+                  
+                  <h2 id="template-talk">Template Talk</h2>
+                  <p>We can now begin building apps with Ionic. Ionic ships with several templates, but we will start with a tabbed app. You can learn about other templates in the Getting Started guide in the notes for this video.</p>
+                  
+                  <h2 id="ionic-start">Ionic Start</h2>
+                  <p>To start a new tab-based application, type <code>ionic start tabsApp tabs</code>.</p>
+                  
+                  <h2 id="looking-at-contents">Looking at Contents</h2>
+                  <p>This will create a folder called tabsApp, so change into the folder. When we look at the folder's contents, we can see there is a lot happening. In the next video, we will break down the structure of an Ionic app and change our application. For now, we will get the application running in the iOS simulator.</p>
+                  
+                  <h2 id="add-platforms">Add Platforms</h2>
+                  <p>An Ionic application does not ship with any platforms installed. To turn our app into something runnable on a device, we need to add specific platforms we want to use. In this case, we want iOS. In the terminal, type <code>ionic platform add ios</code>. Once Ionic resolves its dependencies, we can run the application. </p>
+                  
+                  <h2 id="run">Run</h2>
+                  <p>Type <code>ionic emulate ios</code> to run the iOS simulator.</p>
+                  
+                  <h2 id="emulate">Emulate</h2>
+                  <p>Once it's running, we can now see that we have a working tabbed application. In the next video, we will talk about the structure of an Ionic project and begin customizing our app.</p>
+                </div>
+                <div class='tab-pane' id='similar-videos'></div>
+                <div class='tab-pane' id='scratchpad'></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js'></script>
+  </body>
+</html>
