@@ -4,19 +4,19 @@
 %nav
   %ul
     %li
-      %a{href: "/videos", class: active_class?('videos')}
+      %a{href: @items['/videos/'].path, class: active_class?('videos')}
         %i.ion-videos
         %p Videos
     %li
-      %a{href: "/formulas", class: active_class?('formulas')}
+      %a{href: @items['/formulas/'].path, class: active_class?('formulas')}
         %i.ion-formulas
         %p Formulas
     %li
-      %a{href: "/scratchpad"}
+      %a{href: "/scratchpad/"}
         %i.ion-scratchpad
         %p Scratchpad
     %li
-      %a{href: "/resources", class: active_class?('resources')}
+      %a{href: "/resources/", class: active_class?('resources')}
         %i.ion-resources
         %p Resources
   %footer

@@ -1,11 +1,11 @@
 -render 'default' do
   .content.formula
     %nav
-      %a.left{href: "/formulas"}
+      %a.left{href: @items['/formulas/'].path}
         %i.ion-chevron-left
         All Formulas
       %a.right.scratchpad-share{href: "/scratchpad"}
-        %p Open Scratchpad
+        Open Scratchpad
         %i.ion-share
     %article
       %header

@@ -59,11 +59,11 @@
     line-height: 30px;
   }
 
-  .highlight {
+  .CodeRay {
+    background-color: $ionicWashedBlue;
     pre {
       border: none;
       border-radius: 5px;
-      margin: 60px 0 0;
     }
   }
 
