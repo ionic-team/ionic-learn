@@ -1,0 +1,148 @@
+@import "bootstrap/bootstrap";
+@import "fonts";
+@import "type";
+@import "syntax";
+@import "mixins";
+@import "variables";
+@import "ionic/ionicons";
+
+html {
+  font-family: $font-family-regular;
+}
+h1 {
+  font-size: 40px;
+  letter-spacing: -0.03em;
+  color: #292d32;
+}
+p {
+  font-weight: 200;
+}
+
+.container { 
+  margin-top: 40px;
+}
+
+.main-pane {
+  @include make-sm-column(8);
+  @include make-lg-column(11);
+  @include make-md-column(9);
+}
+
+.cta-sub {
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  color: #677181;
+  line-height: 32px;
+  margin-bottom: 65px;
+}
+
+a {
+  color: #4f8ef7;
+  text-decoration: none;
+  transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+}
+a:hover, a:focus {
+  color: #74A8FF; 
+}
+a:focus {
+  outline: none; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header.cover {
+  margin-bottom: 50px;
+  img { @include size(100%, auto); }
+}
+
+.recent {
+  h2 { 
+    color: #292D32;
+    margin-top: 80px;
+    @include horizontal-rule(20px, 5px, #ECF0F6, bottom); 
+  }
+}
+
+.difficulty {
+  margin-left: 10px;
+  margin-bottom: 1px;
+  @include circle(5px);
+  @each $difficulty, $bgcolor in $difficulties {
+    &.#{$difficulty} { background: $bgcolor; }
+  }
+}
+
+.list .item {
+  border-top: 1px solid $ruleColor;
+  padding: 20px 0;
+  &.hide-top-separator:first-child {
+    border-top: none;
+  }
+
+  h3 {
+  color: #292d32;
+  font-size: 18px;
+  margin-bottom: 4px;
+
+    a {
+      color: #292d32;
+    } 
+    a:hover, a:focus {
+    color: #4f8ef7 !important; 
+    }
+
+  }
+
+  .preview {
+    float: left;
+    padding: 0px 15px;
+  }
+
+  .summary {
+    /* @include make-sm-column(10); */
+    float: left;
+    width: 86%;
+
+    .subhead {
+      font-size: 11px;
+      color: #AAB0BA;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #798291;
+      line-height: 24px;
+    }
+
+  }
+}
+
+.formulas, .videos {
+  .description {
+    p {
+      font-size: 14px;
+    }
+  }
+  > footer {
+    background-color: $ionicWashedBlue;
+    padding: 10px;
+    margin: 20px 0 100px;
+    a {
+      color: $darkLinkText;
+    }
+  }
+}
+
+@import "navigation";
+@import "formula";

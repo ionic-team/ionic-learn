@@ -1,0 +1,42 @@
+.side-nav {
+  @include make-sm-column(4);
+  @include make-lg-column(1);
+  @include make-md-column(3);
+  .logo { 
+    margin-bottom: 50px; 
+    img {
+      width: 100%;
+      max-width: 212px;
+      height: auto;
+    }
+  }
+  nav {
+    i {
+      margin-right: 10px;
+      font-size: 20px;
+      float: left;
+      + p {
+        display: inline-block;
+      }
+    }
+    a {
+      color: #9da7b4;
+      font-size: 13px;
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      &:hover, &.active {
+        color: $ionicDarkBlue;
+        border-right: 3px solid $ionicDarkBlue;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    > ul { width: 80%; }
+    footer {
+      width: 80%;
+      @include horizontal-rule(30px, 30px, #ECF0F6);
+    }
+  }
+}

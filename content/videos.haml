@@ -1,0 +1,17 @@
+---
+title: "Formulas - Ionic Framework"
+body_css: "formulas"
+---
+
+%header.cover
+  %h1 Videos
+  %p Consectetur id facere laboriosam quia voluptatum natus.
+.videos
+  - video_difficulties.each do |difficulty|
+    %header
+      %h3=difficulty.capitalize
+    .list
+      - related_videos(difficulty).each do |video|
+        = render "video", video: video
+    %footer
+      %a{href: difficulty_path(difficulty)} View all #{difficulty.capitalize} Formulas

@@ -1,0 +1,15 @@
+.item.row{class: @item[:extra_class] }
+  .preview
+    %a{href: video.path}
+      %img{alt: "Video Icon", height: "58", src: "/img/video-icon-lg@2x.png", width: "58"}/
+  .summary
+    %h3
+      %a{href: video.path}=video[:name]
+      %span.difficulty{class: video[:difficulty]}
+    %p.subhead
+      May 02, 2014 
+      |
+      %time.running-time #{video[:length]} mins
+      | #{video[:difficulty].capitalize}
+    .description
+      %p=video[:description]

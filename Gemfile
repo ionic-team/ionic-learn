@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'guard'
+gem 'guard-nanoc'
+gem 'guard-livereload'
+gem 'nanoc'
+gem 'adsf'
+gem 'sass'
+gem 'haml'
+gem 'kramdown'

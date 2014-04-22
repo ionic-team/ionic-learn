@@ -1,0 +1,121 @@
+.content.formula, .content.video {
+  margin-bottom: 100px;
+  nav {
+    @include horizontal-rule(40px, 10px, $ruleColor, bottom);
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    .scratchpad-share {
+      p {
+        display: inline-block;
+        font-weight: 500;
+        float: left;
+        margin: 2px 0 0;
+      }
+      i {
+        font-size: 22px;
+        margin-left: 8px;
+        float: right;
+      }
+    }
+    .left { float: left; }
+    .right { float: right; }
+    @include clearfix
+  }
+
+  header h1 {
+    color: #1b2331;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+  }
+
+  .byline {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    color: #B4BFD1;
+    margin-bottom: 45px;
+    @include uppercase-title(10px);
+    .author {
+      @include horizontal-rule(15px, 5px, $ruleColor, right);
+      margin-left: 5px;
+    }
+  }
+
+  h2 {
+    color: #1B2331;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #727983;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .highlight {
+    pre {
+      border: none;
+      border-radius: 5px;
+      margin: 60px 0 0;
+    }
+  }
+
+  blockquote {
+    &:before {
+      content: "!";
+      color: white;
+      padding: 2px 0 0 16px;
+      font-size: 25px;
+      font-weight: bold;
+      background: $ionicDarkBlue;
+      @include circle(20px);
+      @include absolute-vertically-center(20px, 20px);
+    }
+    position: relative;
+    margin: 30px 0;
+    padding: 20px 30px;
+    border: 1px solid $ionicDarkBlue;
+    border-radius: 2px;
+    background: $ionicBlue;
+    color: lighten($ionicDarkBlue, 5%);
+    strong {
+      color: $ionicDarkBlue;
+      font-weight: bold;
+    }
+    p {
+      color: #4e8ef7;
+      font-size: 17px;
+    }
+    code {
+      color: #426fb9;
+      font-size: 15px;
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .scratchpad {
+    p {
+      font-weight: bold;
+      margin: 50px 0;
+    }
+  }
+  
+  footer {
+    @include horizontal-rule(40px, 20px, $ruleColor);
+    margin-bottom: 40px;
+    h6 {
+      @include uppercase-title(12px);
+      color: $uppercaseTitleColor;
+    }
+  }
+}
+

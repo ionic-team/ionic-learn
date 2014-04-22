@@ -1,0 +1,17 @@
+!!! 5
+%html{lang: "en"}
+  %head
+    =render "meta_tags"
+    %title=@item[:title]
+    %link{rel: "stylesheet", href: @items['/css/site/'].path}
+
+  %body.full-page.no-js{class: @item[:body_css]}
+    :javascript
+      document.body.classList.remove('no-js');
+
+    .container
+      .row
+        .side-nav=render "navigation"
+        .main-pane=yield
+
+    =render "base_scripts"

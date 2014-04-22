@@ -1,0 +1,7 @@
+- render 'default' do
+  %header.cover
+    %h1 #{@item[:cateogry].capitalize} Formulas
+  %div.formulas
+    %div.list
+      - related_formulas.each do |formula|
+        =render "formula", formula: formula

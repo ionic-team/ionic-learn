@@ -1,0 +1,22 @@
+-render 'default' do
+  .content.formula
+    %nav
+      %a.left{href: "/formulas"}
+        %i.ion-chevron-left
+        All Formulas
+      %a.right.scratchpad-share{href: "/scratchpad"}
+        %p Open Scratchpad
+        %i.ion-share
+    %article
+      %header
+        %h1=@item[:title]
+        =render "byline"
+      ~ yield
+      %section.scratchpad
+        %p Try this tutorial out below in the Scratchpad:
+        %img{src: "http://placehold.it/750x500"}/
+      %footer
+        %h6 Further Reading
+        .list
+          - related_formulas.take(6).each do |formula|
+            = render "formula", formula: formula

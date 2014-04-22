@@ -1,0 +1,17 @@
+---
+title: "Formulas - Ionic Framework"
+body_css: "formulas"
+---
+
+%header.cover
+  %h1 Formulas
+  %p Tutorials and how-to's on building apps with Ionic. Follow along and test in the Scratchpad.
+.formulas
+  - formula_categories.each do |category|
+    %header
+      %h3=category
+    .list
+      - related_formulas(category).each do |formula|
+        = render "formula", formula: formula
+    %footer
+      %a{href: category_path(category) } View all #{category} Formulas

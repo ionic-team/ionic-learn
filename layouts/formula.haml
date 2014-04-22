@@ -1,0 +1,17 @@
+.item.row{class: (@item[:extra_class] || []).join(' ')}
+  .preview
+    %a{href: formula.path}
+      %img{src: "/img/formula-icon-lg@2x.png", width: 58, height: 58, alt: 'Formula Icon'}
+  .summary
+    %h3
+      %a{href: formula.path}=formula[:title]
+      %span.difficulty{class: formula[:difficulty]}
+    %p.subhead
+      =formula[:date]
+      &nbsp;|
+      %time.reading-time
+        =formula[:reading_time]
+        &nbsp;min read | 
+        =formula[:difficulty].capitalize
+    .description
+      %p=formula[:description]

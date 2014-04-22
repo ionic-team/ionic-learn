@@ -1,0 +1,110 @@
+#!/usr/bin/env ruby
+
+# A few helpful tips about the Rules file:
+#
+# * The string given to #compile and #route are matching patterns for
+#   identifiers--not for paths. Therefore, you can’t match on extension.
+#
+# * The order of rules is important: for each item, only the first matching
+#   rule is applied.
+#
+# * Item identifiers start and end with a slash (e.g. “/about/” for the file
+#   “content/about.html”). To select all children, grandchildren, … of an
+#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
+#   because “*” matches zero or more characters.
+
+detail_identifier = lambda { |id| "/videos/#{id}/details/" }
+transcript_identifier = lambda { |id| "/videos/#{id}/transcript/" }
+video_identifier = lambda { |id| "/videos/#{id}"}
+
+preprocess do
+  video_items = items.select do |item| 
+    split_item = item.identifier.split('/').delete_if(&:empty?)
+    split_item.length > 1 and split_item.first == "videos"
+  end
+  video_names = video_items.map do |item|
+    item.identifier.split('/').delete_if(&:empty?)[1]
+  end.uniq
+
+  video_names.each do |item|
+    detail_attributes = items[detail_identifier.call(item)].attributes
+    items << Nanoc::Item.new(
+      "<%= render 'video_detail' %>",
+      detail_attributes.merge({kind: 'video', details: detail_identifier.call(item), transcript: transcript_identifier.call(item)}),
+      video_identifier.call(item)
+    )
+  end
+
+  video_difficulties.each do |difficulty|
+    items << Nanoc::Item.new(
+      "<%= render 'difficulty_list' %>",
+      {difficulty: difficulty, kind: 'difficulty_list'},
+      "/videos/#{difficulty}/"
+    )
+  end
+
+  formula_categories.each do |category|
+    items << Nanoc::Item.new(
+      "<%= render 'category_list' %>",
+      {category: category, kind: 'category_list'},
+      "/formulas/#{category.downcase.split(' ').join('-')}/"
+    )
+  end
+end
+
+compile '/fonts/*' do
+end
+
+passthrough '/fonts/*'
+
+compile '/css/site/' do
+  filter :sass, syntax: :scss
+end
+
+route '/css/site/' do
+  item.identifier.chop + '.css'
+end
+
+ignore '/css/*'
+
+compile '/formulas/*' do
+  if item[:extension] == "md"
+    filter :kramdown, coderay_line_numbers: nil, smart_quotes: ['apos', 'apos', 'quot', 'quot']
+    layout 'formula-detail'
+  else
+    filter :haml
+    layout 'default'
+  end
+end
+
+compile '/videos/*/*/' do
+  filter :kramdown, coderay_line_numbers: nil, smart_quotes: ['apos', 'apos', 'quot', 'quot']
+end
+
+route '/videos/*/*/' do
+end
+
+compile '/videos/*/' do
+  filter :erb
+end
+
+compile '*' do
+  if item.binary?
+  else
+    filter :haml
+    layout 'default'
+  end
+end
+
+route '*' do
+  if item.binary?
+    # Write item with identifier /foo/ to /foo.ext
+    item.identifier.chop + '.' + item[:extension]
+  else
+    # Write item with identifier /foo/ to /foo/index.html
+    item.identifier + 'index.html'
+  end
+end
+
+
+layout '*', :haml, format: :html5
