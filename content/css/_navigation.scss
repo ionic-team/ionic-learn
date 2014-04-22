@@ -3,7 +3,14 @@
   @include make-lg-column(1);
   @include make-md-column(3);
   .logo { 
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
+    transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    opacity: .85;
+    &:hover {
+      opacity: 1;
+    }
     img {
       max-width: 194px;
       height: auto;

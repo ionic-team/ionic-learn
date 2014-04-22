@@ -8136,7 +8136,13 @@ header.cover {
       float: left;
       width: 25%; } }
   .side-nav .logo {
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    opacity: .85; }
+    .side-nav .logo:hover {
+      opacity: 1; }
     .side-nav .logo img {
       max-width: 194px;
       height: auto; }
