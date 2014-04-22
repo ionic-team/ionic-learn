@@ -31,3 +31,7 @@ end
 def difficulty_path(difficulty)
   @items.select { |item| item[:kind] == "difficulty_list" && item[:difficulty] == difficulty}[0].path
 end
+
+def active_class?(id)
+  @item.identifier.include?(id) && 'active'
+end

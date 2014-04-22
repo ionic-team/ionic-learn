@@ -4,11 +4,11 @@
 %nav
   %ul
     %li
-      %a{href: "/videos"}
+      %a{href: "/videos", class: active_class?('videos')}
         %i.ion-videos
         %p Videos
     %li
-      %a{href: "/formulas"}
+      %a{href: "/formulas", class: active_class?('formulas')}
         %i.ion-formulas
         %p Formulas
     %li
@@ -16,7 +16,7 @@
         %i.ion-scratchpad
         %p Scratchpad
     %li
-      %a{href: "/resources"}
+      %a{href: "/resources", class: active_class?('resources')}
         %i.ion-resources
         %p Resources
   %footer
