@@ -1,0 +1,15 @@
+---
+title: 'Resources - Ionic'
+---
+
+%header.cover.resource-header
+  %h1 Resources
+  %p A reservoir of helpful resources to help you optimize your Ionic development experience. Think we should add something? Suggest it!
+
+- resource_categories.each do |category|
+  .category
+    %header
+      %h3=category
+    .resources
+      - resources_for_category(category).each do |resource|
+        =resource.compiled_content

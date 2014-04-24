@@ -61,3 +61,6 @@ data_sources:
   -
     type: static
     items_root: /
+  -
+    type: resources
+    data_root: data

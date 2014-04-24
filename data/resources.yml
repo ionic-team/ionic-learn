@@ -1,0 +1,99 @@
+categories:
+  - 
+    name: Ionic Resources
+    resources:
+      -
+        name: Community Forum
+        image: resource-forum
+        url: "http://forum.ionicframework.com/"
+
+      -
+        name: Official Documentation
+        image: resource-docs
+        url: "http://ionicframework.com/docs/"
+
+      -
+        name: Ionicons
+        image: resource-ionicons
+        url: "http://ionicons.com/"
+
+      -
+        name: Showcase
+        image: resource-showcase
+        url: "http://showcase.ionicframework.com/"
+
+      -
+        name: Demos
+        image: resource-demos
+        url: "http://ionicframework.com/examples/"
+
+      -
+        name: Official Blog
+        image: resource-blog
+        url: "http://ionicframework.com/blog/"
+
+  - 
+    name: Ionic Stack
+    resources:
+      -
+        name: AngularJS
+        image: resource-angularjs
+        url: https://angularjs.org/
+
+      -
+        name: NodeJS
+        image: resource-nodejs
+        url: http://nodejs.org/
+
+      -
+        name: Sass
+        image: resource-sass
+        url: http://sass-lang.com/
+
+      -
+        name: Bower
+        image: resource-bower
+        url: http://bower.io/
+
+      -
+        name: Cordova
+        image: resource-cordova
+        url: http://cordova.apache.org/
+
+      -
+        name: Gulp
+        image: resource-gulp
+        url: http://gulpjs.com/
+
+      -
+        name: Travis CI
+        image: resource-travis
+        url: https://travis-ci.org/
+
+  - 
+    name: Tools & Services
+    resources:
+      -
+        name: Xcode
+        image: resource-xcode
+        url: https://developer.apple.com/xcode/
+      -
+        name: Eclipse
+        image: resource-eclipse
+        url: https://www.eclipse.org/
+      -
+        name: Firebase
+        image: resource-firebase
+        url: http://firebase.com/
+
+  - 
+    name: Community Projects
+    resources:
+      -
+        name: Ionic Yeoman Generator
+        image: resource-yeoman-ionic
+        url: "https://github.com/diegonetto/generator-ionic"
+      -
+        name: UI Router
+        image: resource-uirouter
+        url: "https://github.com/angular-ui/ui-router"

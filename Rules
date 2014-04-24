@@ -99,6 +99,13 @@ compile '/videos/*/' do
   filter :erb
 end
 
+compile '/resources/items/*/' do
+  filter :erb
+end
+
+route '/resources/items/*/' do
+end
+
 
 compile '*' do
   if item.binary?

@@ -35,3 +35,15 @@ end
 def active_class?(id)
   @item.identifier.include?(id) && 'active'
 end
+
+def resources
+  @items.select { |item| item[:kind] == "resource" }
+end
+
+def resources_for_category(category)
+  resources.select { |item| item[:category] == category }
+end
+
+def resource_categories
+  resources.map { |item| item[:category] }.uniq
+end
