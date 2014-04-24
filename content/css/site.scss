@@ -175,6 +175,13 @@ header.cover {
     height: 21px;
     border-radius: 12px;
     border: 1px solid darken($ionicWashedBlue, 10%);
+    transition: all 0.3s linear;
+    &:hover {
+      border-color: $ionicDarkBlue;
+      &:before {
+        color: $ionicDarkBlue;
+      }
+    }
     &:before {
       font-size: 24px;
       margin-left: 5px;
