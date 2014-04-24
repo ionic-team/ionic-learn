@@ -8198,9 +8198,9 @@ footer.main {
     overflow: hidden;
     -webkit-transition: all 0.3s ease-out; }
     footer.main nav.expanded {
-      text-indent: 50px; }
+      text-indent: 90px; }
     footer.main nav a {
-      margin-right: 30px;
+      margin-right: 40px;
       font-size: 13px;
       color: #afccfb; }
       footer.main nav a:hover {

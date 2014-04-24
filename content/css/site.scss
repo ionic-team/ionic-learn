@@ -241,10 +241,10 @@ footer.main {
     overflow: hidden;
     -webkit-transition: all 0.3s ease-out;
     &.expanded {
-      text-indent: 50px;
+      text-indent: 90px;
     }
     a {
-      margin-right: 30px;
+      margin-right: 40px;
       font-size: 13px;
       color: lighten($ionicDarkBlue, 20%);
       &:hover {
