@@ -27,4 +27,6 @@ $(function() {
     $('.get-ionic-wrapper').addClass('viewed');
     localStorage.setItem('viewedCta', true);
   });
+
+  $('span.difficulty').tooltip({});
 });

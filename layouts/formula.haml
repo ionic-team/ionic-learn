@@ -5,7 +5,7 @@
   .summary
     %h3
       %a{href: formula.path}=formula[:title]
-      %span.difficulty{class: formula[:difficulty]}
+      %span.difficulty{class: formula[:difficulty], "data-toggle" => "tooltip", "data-placement" => "right", title: formula[:difficulty].capitalize}
     %p.subhead
       =formula[:date]
       &nbsp;|

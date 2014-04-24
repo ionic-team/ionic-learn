@@ -5,7 +5,7 @@
   .summary
     %h3
       %a{href: video.path}=video[:name]
-      %span.difficulty{class: video[:difficulty]}
+      %span.difficulty{class: video[:difficulty], "data-toggle" => "tooltip", "data-placement" => "right", title: video[:difficulty].capitalize}
     %p.subhead
       May 02, 2014 
       |
