@@ -151,8 +151,8 @@ header.cover {
   left: 0;
   padding: 10px 0;
   opacity: 1;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
+  transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
   &.viewed {
     opacity: 0;
   }
