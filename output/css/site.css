@@ -8123,12 +8123,20 @@ header.cover {
     opacity: 0; }
   .get-ionic-wrapper .get-ionic {
     font-family: "AvenirNextLTPro-Regular";
-    background: red;
-    padding: 10px;
+    padding: 14px 12px;
     background: #eef5ff;
     border: 1px solid #c8d6e6;
-    border-radius: 5px;
-    font-size: 14px; }
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: 15px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05); }
+    .get-ionic-wrapper .get-ionic:hover {
+      border-color: #4e8ef7;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+      -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08); }
   .get-ionic-wrapper .close-cta {
     background: white;
     display: inline-block;

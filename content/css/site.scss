@@ -158,12 +158,21 @@ header.cover {
   }
   .get-ionic {
     font-family: "AvenirNextLTPro-Regular";
-    background: red;
-    padding: 10px;
+    padding: 14px 12px;
     background: $ionicBlue;
     border: 1px solid darken($ionicWashedBlue, 10%);
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 14px;
+    margin-left: 15px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+    &:hover {
+      border-color: #4e8ef7;
+      box-shadow: 0px 1px 1px rgba(0,0,0,0.08);
+      -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.08);
+      -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.08);
+    }
   }
   .close-cta {
     background: white;
