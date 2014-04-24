@@ -65,6 +65,11 @@ compile '/css/site/' do
   filter :sass, syntax: :scss
 end
 
+compile '/js/*' do
+end
+
+passthrough '/js/*'
+
 route '/css/site/' do
   item.identifier.chop + '.css'
 end

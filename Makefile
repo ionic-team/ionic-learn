@@ -1,6 +1,6 @@
 all: clean nanoc
 clean: 
-	rm -rf _site/
+	rm -rf output/
 nanoc:
 	nanoc
 

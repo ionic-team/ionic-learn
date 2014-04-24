@@ -26,6 +26,7 @@ p {
   @include make-sm-column(8);
   @include make-lg-column(11);
   @include make-md-column(9);
+  margin-bottom: 30px;
 }
 
 .cta-sub {
@@ -140,6 +141,71 @@ header.cover {
     margin: 20px 0 100px;
     a {
       color: $darkLinkText;
+    }
+  }
+}
+
+.get-ionic {
+  font-family: "AvenirNextLTPro-Regular";
+  position: fixed;
+  background: red;
+  bottom: 100px;
+  left: 0;
+  padding: 10px;
+  background: $ionicBlue;
+  border: 1px solid darken($ionicWashedBlue, 10%);
+  color: $ionicWashedBlue;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+footer.main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  .attribution {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+    margin-right: 100px; 
+    color: darken($ruleColor, 10%);
+  }
+  .expand-wrapper {
+    .expand {
+      @include circle(4px);
+      background-color: $ionicDarkBlue;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 2px;
+      &:before, &:after {
+        position: absolute;
+        content: "";
+        @include circle(4px);
+        background-color: $ionicDarkBlue;
+        display: inline-block;
+      }
+      &:before {
+        bottom: 0;
+        left: -10px;
+      }
+      &:after {
+        bottom: 0;
+        right: -10px;
+      }
+    }
+  }
+  nav {
+    font-family: "AvenirNextLTPro-UltLt";
+    display: inline-block;
+    text-indent: -800px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    &.expanded {
+      text-indent: 50px;
+    }
+    a {
+      margin-right: 30px;
+      color: lighten($ionicDarkBlue, 20%);
     }
   }
 }

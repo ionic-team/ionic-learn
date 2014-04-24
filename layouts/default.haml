@@ -13,5 +13,22 @@
       .row
         .side-nav=render "navigation"
         .main-pane~yield
+      %footer.main
+        %span.attribution &copy; 2014 Drifty Co.
+        %span.expand-wrapper
+          %span.expand
+        %nav
+          %a{href: "#"} Privacy
+          %a{href: "#"} Terms
+          %a{href: "#"} Contact us
+          %a{href: "#"} Suggestions
+          %a{href: "#"} Scratchpad
+          %a{href: "#"} Ionicons
+          %a{href: "#"} Jobs
+          %a{href: "#"} Forum
+          %a{href: "#"} Blog
+    .get-ionic
+      %a{href: "http://www.ionicframework.com", target: "_new"} Get building with Ionic today!
 
     =render "base_scripts"
+    %script{src: '/js/main.js'}

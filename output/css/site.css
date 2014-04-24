@@ -8002,7 +8002,8 @@ p {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  margin-bottom: 30px; }
   @media (min-width: 768px) {
     .main-pane {
       float: left;
@@ -8109,6 +8110,65 @@ header.cover {
   margin: 20px 0 100px; }
   .formulas > footer a, .videos > footer a {
     color: #8c9ba1; }
+
+.get-ionic {
+  font-family: "AvenirNextLTPro-Regular";
+  position: fixed;
+  background: red;
+  bottom: 100px;
+  left: 0;
+  padding: 10px;
+  background: #eef5ff;
+  border: 1px solid #c8d6e6;
+  color: #ebf0f6;
+  border-radius: 5px;
+  font-size: 14px; }
+
+footer.main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; }
+  footer.main .attribution {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 12px;
+    margin-right: 100px;
+    color: #c9d5e6; }
+  footer.main .expand-wrapper .expand {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: #4d8df7;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 2px; }
+    footer.main .expand-wrapper .expand:before, footer.main .expand-wrapper .expand:after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      display: inline-block;
+      background-color: #4d8df7;
+      display: inline-block; }
+    footer.main .expand-wrapper .expand:before {
+      bottom: 0;
+      left: -10px; }
+    footer.main .expand-wrapper .expand:after {
+      bottom: 0;
+      right: -10px; }
+  footer.main nav {
+    font-family: "AvenirNextLTPro-UltLt";
+    display: inline-block;
+    text-indent: -800px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-out; }
+    footer.main nav.expanded {
+      text-indent: 50px; }
+    footer.main nav a {
+      margin-right: 30px;
+      color: #afccfb; }
 
 .side-nav {
   position: relative;
