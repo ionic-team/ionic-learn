@@ -1,6 +1,7 @@
 $(function() {
   var $container = $('.container');
-  var $getIonic = $('.get-ionic');
+  var $getIonic = $('.get-ionic-wrapper');
+  var viewedCta = localStorage.getItem('viewedCta');
 
 
   function setGetIonicPosition() {
@@ -16,5 +17,14 @@ $(function() {
 
   $('.expand').on('click', function() {
     $('footer.main nav').toggleClass('expanded');
+  });
+
+  if (!viewedCta) {
+    $('.get-ionic-wrapper').removeClass('viewed');
+  }
+
+  $(document).on('click', '.close-cta', function(e) {
+    $('.get-ionic-wrapper').addClass('viewed');
+    localStorage.setItem('viewedCta', true);
   });
 });

@@ -27,8 +27,9 @@
           %a{href: "#"} Jobs
           %a{href: "#"} Forum
           %a{href: "#"} Blog
-    .get-ionic
-      %a{href: "http://www.ionicframework.com", target: "_new"} Get building with Ionic today!
+    .get-ionic-wrapper.viewed
+      %a.get-ionic{href: "http://www.ionicframework.com", target: "_new"} Get building with Ionic today!
+      %a.close-cta.ion-ios7-close-empty{href: "#"}
 
     =render "base_scripts"
     %script{src: '/js/main.js'}

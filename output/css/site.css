@@ -8111,18 +8111,38 @@ header.cover {
   .formulas > footer a, .videos > footer a {
     color: #8c9ba1; }
 
-.get-ionic {
-  font-family: "AvenirNextLTPro-Regular";
+.get-ionic-wrapper {
   position: fixed;
-  background: red;
   bottom: 100px;
   left: 0;
-  padding: 10px;
-  background: #eef5ff;
-  border: 1px solid #c8d6e6;
-  color: #ebf0f6;
-  border-radius: 5px;
-  font-size: 14px; }
+  padding: 10px 0;
+  opacity: 1;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear; }
+  .get-ionic-wrapper.viewed {
+    opacity: 0; }
+  .get-ionic-wrapper .get-ionic {
+    font-family: "AvenirNextLTPro-Regular";
+    background: red;
+    padding: 10px;
+    background: #eef5ff;
+    border: 1px solid #c8d6e6;
+    border-radius: 5px;
+    font-size: 14px; }
+  .get-ionic-wrapper .close-cta {
+    background: white;
+    display: inline-block;
+    position: absolute;
+    right: -10px;
+    top: -7px;
+    width: 21px;
+    height: 21px;
+    border-radius: 12px;
+    border: 1px solid #c8d6e6; }
+    .get-ionic-wrapper .close-cta:before {
+      font-size: 24px;
+      margin-left: 5px;
+      line-height: 19px; }
 
 footer.main {
   display: flex;

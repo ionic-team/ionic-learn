@@ -145,18 +145,42 @@ header.cover {
   }
 }
 
-.get-ionic {
-  font-family: "AvenirNextLTPro-Regular";
+.get-ionic-wrapper {
   position: fixed;
-  background: red;
   bottom: 100px;
   left: 0;
-  padding: 10px;
-  background: $ionicBlue;
-  border: 1px solid darken($ionicWashedBlue, 10%);
-  color: $ionicWashedBlue;
-  border-radius: 5px;
-  font-size: 14px;
+  padding: 10px 0;
+  opacity: 1;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  &.viewed {
+    opacity: 0;
+  }
+  .get-ionic {
+    font-family: "AvenirNextLTPro-Regular";
+    background: red;
+    padding: 10px;
+    background: $ionicBlue;
+    border: 1px solid darken($ionicWashedBlue, 10%);
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .close-cta {
+    background: white;
+    display: inline-block;
+    position: absolute;
+    right: -10px;
+    top: -7px;
+    width: 21px;
+    height: 21px;
+    border-radius: 12px;
+    border: 1px solid darken($ionicWashedBlue, 10%);
+    &:before {
+      font-size: 24px;
+      margin-left: 5px;
+      line-height: 19px;
+    }
+  }
 }
 
 footer.main {
