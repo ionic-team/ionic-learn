@@ -10,7 +10,7 @@
     %article
       %header
         %h1=@item[:title]
-        =render "byline"
+        =author(@item[:author]).compiled_content
       ~ yield
       %section.scratchpad
         %p Try this tutorial out below in the Scratchpad:

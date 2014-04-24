@@ -10,7 +10,7 @@
     %article
       %header
         %h1=@item[:name]
-        =render "byline"
+        =author(@item[:author]).compiled_content
       %iframe{allowfullscreen: "", frameborder: "0", height: "505", src: @item[:embed_code], width: "847"}
       %ul.nav.nav-tabs
         %li.active

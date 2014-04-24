@@ -64,3 +64,6 @@ data_sources:
   -
     type: resources
     data_root: data
+  -
+    type: authors
+    data_root: data

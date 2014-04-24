@@ -1,6 +1,6 @@
 .byline
-  %img{src: "http://placehold.it/30x30"}
+  %img{src: "/img/authors/#{@item[:slug]}.png"}
   %span.author
     Written by
-    %a{href: "#"}=@item[:author]
+    %a{href: "https://twiter.com/#{@item[:twitter]}", target: "_new"}=@item[:name]
   %time=@item[:date] 

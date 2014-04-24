@@ -106,6 +106,13 @@ end
 route '/resources/items/*/' do
 end
 
+compile '/authors/bylines/*/' do
+  filter :erb
+end
+
+route '/authors/bylines/*/' do
+end
+
 
 compile '*' do
   if item.binary?

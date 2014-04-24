@@ -28,5 +28,10 @@ $(function() {
     localStorage.setItem('viewedCta', true);
   });
 
+  $(document).on('click', '.get-ionic', function(e) {
+    localStorage.setItem('viewedCta', true);
+    $('.get-ionic-wrapper').hide();
+  });
+
   $('span.difficulty').tooltip({});
 });

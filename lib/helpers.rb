@@ -47,3 +47,7 @@ end
 def resource_categories
   resources.map { |item| item[:category] }.uniq
 end
+
+def author(name)
+  @items.detect { |item| item[:kind] == "author" && item[:name] == name}
+end

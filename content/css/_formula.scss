@@ -37,6 +37,9 @@
     color: #B4BFD1;
     margin-bottom: 45px;
     @include uppercase-title(10px);
+    img {
+      width: 30px;
+    }
     .author {
       @include horizontal-rule(15px, 5px, $ruleColor, right);
       margin-left: 5px;

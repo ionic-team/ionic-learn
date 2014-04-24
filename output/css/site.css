@@ -4103,7 +4103,7 @@ body.modal-open {
   color: white;
   text-align: center;
   text-decoration: none;
-  background-color: black;
+  background-color: #394251;
   border-radius: 2px; }
 
 .tooltip-arrow {
@@ -4118,45 +4118,45 @@ body.modal-open {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: black; }
+  border-top-color: #394251; }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
   left: 5px;
   border-width: 5px 5px 0;
-  border-top-color: black; }
+  border-top-color: #394251; }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   right: 5px;
   border-width: 5px 5px 0;
-  border-top-color: black; }
+  border-top-color: #394251; }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: black; }
+  border-right-color: #394251; }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: black; }
+  border-left-color: #394251; }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: black; }
+  border-bottom-color: #394251; }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   left: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: black; }
+  border-bottom-color: #394251; }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   right: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: black; }
+  border-bottom-color: #394251; }
 
 .popover {
   position: absolute;
@@ -8311,6 +8311,8 @@ footer.main {
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 10px; }
+    .content.formula .byline img, .content.video .byline img {
+      width: 30px; }
     .content.formula .byline .author, .content.video .byline .author {
       border-right: 1px solid #ecf0f6;
       padding-right: 5px;
