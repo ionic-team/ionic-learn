@@ -1,6 +1,6 @@
 - render 'default' do
   %header.cover
-    %h1 #{@item[:cateogry].capitalize} Formulas
+    %h1 #{@item[:category].split(' ').map(&:capitalize).join(' ')} Formulas
   %div.formulas
     %div.list
       - related_formulas.each do |formula|

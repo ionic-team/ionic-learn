@@ -80,9 +80,11 @@ compile '/formulas/*' do
   if item[:extension] == "md"
     filter :kramdown, coderay_line_numbers: nil, smart_quotes: ['apos', 'apos', 'quot', 'quot']
     layout 'formula-detail'
-  else
+  elsif item[:extension] == "haml"
     filter :haml
     layout 'default'
+  else
+    filter :erb
   end
 end
 
@@ -96,6 +98,7 @@ end
 compile '/videos/*/' do
   filter :erb
 end
+
 
 compile '*' do
   if item.binary?
