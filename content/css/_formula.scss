@@ -41,7 +41,6 @@
       width: 30px;
     }
     .author {
-      @include horizontal-rule(15px, 5px, $ruleColor, right);
       margin-left: 5px;
     }
   }

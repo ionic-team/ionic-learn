@@ -8314,9 +8314,6 @@ footer.main {
     .content.formula .byline img, .content.video .byline img {
       width: 30px; }
     .content.formula .byline .author, .content.video .byline .author {
-      border-right: 1px solid #ecf0f6;
-      padding-right: 5px;
-      margin-right: 15px;
       margin-left: 5px; }
   .content.formula h2, .content.video h2 {
     color: #1B2331;
