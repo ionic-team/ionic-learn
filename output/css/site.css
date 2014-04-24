@@ -8105,11 +8105,11 @@ header.cover {
 .formulas .description p, .videos .description p {
   font-size: 14px; }
 .formulas > footer, .videos > footer {
-  background-color: #ebf0f6;
+  background-color: #F2F6FA;
   padding: 10px;
   margin: 20px 0 100px; }
   .formulas > footer a, .videos > footer a {
-    color: #8c9ba1; }
+    color: #9CB1D4; }
 
 .get-ionic-wrapper {
   position: fixed;
