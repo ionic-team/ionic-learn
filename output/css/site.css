@@ -8116,7 +8116,8 @@ header.cover {
   bottom: 100px;
   left: 0;
   padding: 10px 0;
-  opacity: 1;
+  opacity: 0.9;
+  margin-left: 15px;
   transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear; }
   .get-ionic-wrapper.viewed {
@@ -8192,7 +8193,7 @@ footer.main {
       bottom: 0;
       right: -10px; }
   footer.main nav {
-    font-family: "AvenirNextLTPro-UltLt";
+    font-family: "AvenirNextLTPro-Regular";
     display: inline-block;
     text-indent: -800px;
     overflow: hidden;
@@ -8201,7 +8202,10 @@ footer.main {
       text-indent: 50px; }
     footer.main nav a {
       margin-right: 30px;
+      font-size: 13px;
       color: #afccfb; }
+      footer.main nav a:hover {
+        color: #4e8ef7; }
 
 .side-nav {
   position: relative;
