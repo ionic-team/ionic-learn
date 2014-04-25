@@ -8419,7 +8419,7 @@ footer.main {
     .resource:hover .caption {
       color: #333; }
   .resource img {
-    border-radius: 3px 3px 0 0;
+    border-radius: 2px 2px 0 0;
     width: 100%; }
   .resource .caption {
     font-family: "AvenirNextLTPro-Regular";
