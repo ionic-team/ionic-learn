@@ -154,6 +154,9 @@ header.cover {
   margin-left: 15px;
   transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear;
+  &:hover {
+    opacity: 1;
+  }
   &.viewed {
     opacity: 0;
   }
@@ -172,6 +175,11 @@ header.cover {
       box-shadow: 0px 1px 1px rgba(0,0,0,0.08);
       -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.08);
       -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.08);
+      color: #3472D6;
+    }
+    &:active {
+      box-shadow: 0px 1px 1px rgba(0,0,0,0), inset 0px 1px 1px rgba(0,0,0,0.15);
+      background: #D9E4F5;
     }
   }
   .close-cta {

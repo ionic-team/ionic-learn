@@ -8120,6 +8120,8 @@ header.cover {
   margin-left: 15px;
   transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear; }
+  .get-ionic-wrapper:hover {
+    opacity: 1; }
   .get-ionic-wrapper.viewed {
     opacity: 0; }
   .get-ionic-wrapper .get-ionic {
@@ -8136,7 +8138,11 @@ header.cover {
       border-color: #4e8ef7;
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
       -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08); }
+      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+      color: #3472D6; }
+    .get-ionic-wrapper .get-ionic:active {
+      box-shadow: 0px 1px 1px transparent, inset 0px 1px 1px rgba(0, 0, 0, 0.15);
+      background: #D9E4F5; }
   .get-ionic-wrapper .close-cta {
     background: white;
     display: inline-block;
