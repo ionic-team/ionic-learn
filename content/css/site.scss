@@ -179,6 +179,8 @@ header.cover {
     }
     &:active {
       box-shadow: 0px 1px 1px rgba(0,0,0,0), inset 0px 1px 1px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0), inset 0px 1px 1px rgba(0,0,0,0.15);
+      -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0), inset 0px 1px 1px rgba(0,0,0,0.15);
       background: #D9E4F5;
     }
   }
@@ -193,6 +195,9 @@ header.cover {
     border-radius: 12px;
     border: 1px solid darken($ionicWashedBlue, 10%);
     transition: all 0.3s linear;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
     &:hover {
       border-color: $ionicDarkBlue;
       &:before {
