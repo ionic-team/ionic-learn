@@ -38,7 +38,8 @@
     margin-bottom: 45px;
     @include uppercase-title(10px);
     img {
-      width: 30px;
+      width: 20px;
+      border-radius: 100px;
     }
     .author {
       margin-left: 5px;
