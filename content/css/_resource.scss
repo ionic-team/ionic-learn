@@ -39,6 +39,9 @@
     width: 100%;
     padding: 10px;
     color: rgb(156,167,181);
+    transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
     i {
       font-size: 22px;
     }

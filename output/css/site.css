@@ -8427,6 +8427,9 @@ footer.main {
     justify-content: space-between;
     width: 100%;
     padding: 10px;
-    color: #9ca7b5; }
+    color: #9ca7b5;
+    transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -webkit-transition: 0.1s linear; }
     .resource .caption i {
       font-size: 22px; }
