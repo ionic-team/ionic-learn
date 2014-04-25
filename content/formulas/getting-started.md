@@ -7,7 +7,7 @@ description: Sit optio soluta at laudantium doloremque a? Rerum aperiam voluptas
 difficulty: beginner
 reading_time: 3
 slug: getting-started
-main_category: Ionic Basics
+category: Ionic Basics
 kind: formula
 ---
 

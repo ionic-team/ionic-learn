@@ -4,12 +4,12 @@ def formulas
   @items.select { |item| item[:kind] == "formula" }
 end
 
-def related_formulas(category = @item[:main_category])
-  formulas.select { |item| item[:main_category] == category and item != @item }
+def related_formulas(category = @item[:category])
+  formulas.select { |item| item[:category] == category and item != @item }
 end
 
 def formula_categories
-  formulas.map { |item| item[:main_category] }.uniq
+  formulas.map { |item| item[:category] }.uniq
 end
 
 def category_path(category)
