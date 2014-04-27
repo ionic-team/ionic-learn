@@ -8310,136 +8310,134 @@ footer.main {
     padding-top: 30px;
     margin-top: 30px; }
 
-.content.formula, .content.video {
-  margin-bottom: 100px; }
-  .content.formula nav, .content.video nav {
-    border-bottom: 1px solid #ecf0f6;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    font-size: 13px;
-    font-weight: 500; }
-    .content.formula nav .scratchpad-share span, .content.video nav .scratchpad-share span {
-      display: inline-block;
-      font-weight: 500;
-      float: left;
-      margin: 2px 0 0; }
-    .content.formula nav .scratchpad-share i, .content.video nav .scratchpad-share i {
-      font-size: 22px;
-      margin-left: 8px;
-      float: right; }
-    .content.formula nav .left, .content.video nav .left {
-      float: left; }
-    .content.formula nav .right, .content.video nav .right {
-      float: right; }
-    .content.formula nav:before, .content.formula nav:after, .content.video nav:before, .content.video nav:after {
-      content: " ";
-      /* 1 */
-      display: table;
-      /* 2 */ }
-    .content.formula nav:after, .content.video nav:after {
-      clear: both; }
-  .content.formula header h1, .content.video header h1 {
-    color: #1b2331;
-    font-size: 30px;
-    letter-spacing: -0.02em;
-    padding-bottom: 4px;
-    margin-bottom: 0; }
-  .content.formula .byline, .content.video .byline {
+.content.formula nav, .content.video nav {
+  border-bottom: 1px solid #ecf0f6;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 500; }
+  .content.formula nav .scratchpad-share span, .content.video nav .scratchpad-share span {
+    display: inline-block;
+    font-weight: 500;
+    float: left;
+    margin: 2px 0 0; }
+  .content.formula nav .scratchpad-share i, .content.video nav .scratchpad-share i {
+    font-size: 22px;
+    margin-left: 8px;
+    float: right; }
+  .content.formula nav .left, .content.video nav .left {
+    float: left; }
+  .content.formula nav .right, .content.video nav .right {
+    float: right; }
+  .content.formula nav:before, .content.formula nav:after, .content.video nav:before, .content.video nav:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .content.formula nav:after, .content.video nav:after {
+    clear: both; }
+.content.formula header h1, .content.video header h1 {
+  color: #1b2331;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  padding-bottom: 4px;
+  margin-bottom: 0; }
+.content.formula .byline, .content.video .byline {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #B4BFD1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 10px; }
+  .content.formula .byline img, .content.video .byline img {
+    width: 20px;
+    border-radius: 100px; }
+  .content.formula .byline .author, .content.video .byline .author {
+    margin-left: 5px; }
+.content.formula .description, .content.video .description {
+  margin: 30px 0; }
+.content.formula h2, .content.video h2 {
+  color: #1B2331;
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  margin-bottom: 15px; }
+.content.formula p, .content.video p {
+  color: #727983;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px; }
+.content.formula .CodeRay, .content.video .CodeRay {
+  background-color: #ebf0f6; }
+  .content.formula .CodeRay pre, .content.video .CodeRay pre {
+    border: none;
+    border-radius: 5px; }
+.content.formula blockquote.quote, .content.video blockquote.quote {
+  padding: 0 30px;
+  margin: 35px 0;
+  border-left: 9px solid #ebeff5;
+  font-style: italic; }
+  .content.formula blockquote.quote p, .content.video blockquote.quote p {
+    letter-spacing: 1px;
+    color: #b8c6dc; }
+.content.formula blockquote.note, .content.video blockquote.note {
+  position: relative;
+  margin: 30px 0;
+  padding: 20px 30px;
+  border: 1px solid #4d8df7;
+  border-radius: 2px;
+  background: #eef5ff;
+  color: #659df8; }
+  .content.formula blockquote.note:before, .content.video blockquote.note:before {
+    content: "!";
+    color: white;
+    padding: 2px 0 0 16px;
+    font-size: 25px;
+    font-weight: bold;
+    background: #4d8df7;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -ie-transform-origin: center center;
+    -webkit-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    transform: translate(0, -20px); }
+  .content.formula blockquote.note strong, .content.video blockquote.note strong {
+    color: #4d8df7;
+    font-weight: bold; }
+  .content.formula blockquote.note p, .content.video blockquote.note p {
+    color: #4e8ef7;
+    font-size: 17px; }
+  .content.formula blockquote.note code, .content.video blockquote.note code {
+    color: #426fb9;
+    font-size: 15px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0; }
+.content.formula .scratchpad p, .content.video .scratchpad p {
+  font-weight: bold;
+  margin: 50px 0; }
+.content.formula footer, .content.video footer {
+  border-top: 1px solid #ecf0f6;
+  padding-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  .content.formula footer h6, .content.video footer h6 {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     color: #B4BFD1;
+    margin-bottom: 45px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-size: 10px; }
-    .content.formula .byline img, .content.video .byline img {
-      width: 20px;
-      border-radius: 100px; }
-    .content.formula .byline .author, .content.video .byline .author {
-      margin-left: 5px; }
-  .content.formula .description, .content.video .description {
-    margin: 30px 0; }
-  .content.formula h2, .content.video h2 {
-    color: #1B2331;
-    font-size: 20px;
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 400;
-    margin-bottom: 15px; }
-  .content.formula p, .content.video p {
-    color: #727983;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 30px; }
-  .content.formula .CodeRay, .content.video .CodeRay {
-    background-color: #ebf0f6; }
-    .content.formula .CodeRay pre, .content.video .CodeRay pre {
-      border: none;
-      border-radius: 5px; }
-  .content.formula blockquote.quote, .content.video blockquote.quote {
-    padding: 0 30px;
-    margin: 35px 0;
-    border-left: 9px solid #ebeff5;
-    font-style: italic; }
-    .content.formula blockquote.quote p, .content.video blockquote.quote p {
-      letter-spacing: 1px;
-      color: #b8c6dc; }
-  .content.formula blockquote.note, .content.video blockquote.note {
-    position: relative;
-    margin: 30px 0;
-    padding: 20px 30px;
-    border: 1px solid #4d8df7;
-    border-radius: 2px;
-    background: #eef5ff;
-    color: #659df8; }
-    .content.formula blockquote.note:before, .content.video blockquote.note:before {
-      content: "!";
-      color: white;
-      padding: 2px 0 0 16px;
-      font-size: 25px;
-      font-weight: bold;
-      background: #4d8df7;
-      width: 40px;
-      height: 40px;
-      border-radius: 20px;
-      display: inline-block;
-      position: absolute;
-      top: 50%;
-      left: -20px;
-      transform-origin: center center;
-      -webkit-transform-origin: center center;
-      -ie-transform-origin: center center;
-      -webkit-transform: translate(0, -20px);
-      -ms-transform: translate(0, -20px);
-      transform: translate(0, -20px); }
-    .content.formula blockquote.note strong, .content.video blockquote.note strong {
-      color: #4d8df7;
-      font-weight: bold; }
-    .content.formula blockquote.note p, .content.video blockquote.note p {
-      color: #4e8ef7;
-      font-size: 17px; }
-    .content.formula blockquote.note code, .content.video blockquote.note code {
-      color: #426fb9;
-      font-size: 15px;
-      background-color: transparent;
-      margin: 0;
-      padding: 0; }
-  .content.formula .scratchpad p, .content.video .scratchpad p {
-    font-weight: bold;
-    margin: 50px 0; }
-  .content.formula footer, .content.video footer {
-    border-top: 1px solid #ecf0f6;
-    padding-top: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px; }
-    .content.formula footer h6, .content.video footer h6 {
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      font-weight: 300;
-      color: #B4BFD1;
-      margin-bottom: 45px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-size: 12px; }
+    font-size: 12px; }
 
 .category h3 {
   margin-bottom: 20px;
