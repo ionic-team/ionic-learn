@@ -1,6 +1,6 @@
 ---
 layout: videos
-name: "H1: Video Introduction to Ionic Framework"
+name: "H1: Video Introduction to Ionic"
 author: Gerred Dillon
 date: April 22, 2014
 difficulty: beginner

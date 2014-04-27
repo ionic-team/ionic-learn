@@ -1,4 +1,4 @@
-In this video we will learn about Ionic Framework for iOS development. Ionic Framework is a front-end framework for developing hybrid mobile apps with HTML5.
+In this video we will learn about Ionic for iOS development. Ionic is a front-end framework for developing hybrid mobile apps with HTML5.
 
 To start using Ionic with iOS, you will need MacOSX with XCode, the XCode Command Line Tools, and node.js installed. Instructions for installing these pre-requisites are in the notes for this video.
 
