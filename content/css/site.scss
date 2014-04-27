@@ -138,6 +138,10 @@ header.cover {
     }
   }
   > footer {
+    margin-bottom: 60px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     a {
       background-color: #F2F6FA;
       padding: 10px;

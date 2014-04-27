@@ -1,8 +1,11 @@
 include Nanoc::Helpers::Rendering
 include Nanoc3::Helpers::XMLSitemap
+require 'date'
 
 def formulas
-  @items.select { |item| item[:kind] == "formula" }
+  @items.select { |item| item[:kind] == "formula" }.sort do |a, b|
+    Date.parse(b[:date]) <=> Date.parse(a[:date])
+  end
 end
 
 def related_formulas(category = @item[:category])
@@ -18,7 +21,9 @@ def category_path(category)
 end
 
 def videos
-  @items.select { |item| item[:kind] == "video" }
+  @items.select { |item| item[:kind] == "video" }.sort do |a, b|
+    Date.parse(b[:date]) <=> Date.parse(a[:date])
+  end
 end
 
 def related_videos(difficulty = @item[:difficulty])

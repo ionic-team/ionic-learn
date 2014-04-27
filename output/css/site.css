@@ -8105,17 +8105,21 @@ header.cover {
 
 .formulas .description p, .videos .description p {
   font-size: 14px; }
-.formulas > footer a, .videos > footer a {
-  background-color: #F2F6FA;
-  padding: 10px;
-  margin: 20px 0 0;
-  color: #9CB1D4;
-  display: flex;
-  justify-content: space-between; }
-  .formulas > footer a i, .videos > footer a i {
-    line-height: 22px; }
-  .formulas > footer a:hover, .videos > footer a:hover {
-    color: #4d8df7; }
+.formulas > footer, .videos > footer {
+  margin-bottom: 60px; }
+  .formulas > footer:last-of-type, .videos > footer:last-of-type {
+    margin-bottom: 0; }
+  .formulas > footer a, .videos > footer a {
+    background-color: #F2F6FA;
+    padding: 10px;
+    margin: 20px 0 0;
+    color: #9CB1D4;
+    display: flex;
+    justify-content: space-between; }
+    .formulas > footer a i, .videos > footer a i {
+      line-height: 22px; }
+    .formulas > footer a:hover, .videos > footer a:hover {
+      color: #4d8df7; }
 
 .get-ionic-wrapper {
   position: fixed;
