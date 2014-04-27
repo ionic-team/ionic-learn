@@ -32,7 +32,9 @@ $(function() {
   });
   
 
-  if (!viewedCta) {
+  if (viewedCta) {
+    $('.get-ionic-wrapper').hide();
+  } else {
     $('.get-ionic-wrapper').removeClass('viewed');
   }
 
