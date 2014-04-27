@@ -2,7 +2,7 @@
 %html{lang: "en"}
   %head
     =render "meta_tags"
-    %title=@item[:title]
+    %title=[@item[:titles], "Learn Ionic"].flatten.compact.join(' | ')
     %link{rel: "stylesheet", href: @items['/css/site/'].path}
     %link{rel: "stylesheet", href: "//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"}
 

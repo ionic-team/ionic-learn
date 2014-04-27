@@ -26,13 +26,22 @@ preprocess do
     item.identifier.split('/').delete_if(&:empty?)[1]
   end.uniq
 
+  formulas.each do |formula|
+    formula[:titles] = [formula[:title], "Formulas"]
+  end
+
   video_names.each do |item|
     detail_page = items[detail_identifier.call(item)]
     if !detail_page.nil? && detail_attributes = detail_page.attributes
       if detail_page[:live] == true
         items << Nanoc::Item.new(
           "<%= render 'video_detail' %>",
-          detail_attributes.merge({kind: 'video', details: detail_identifier.call(item), transcript: transcript_identifier.call(item)}),
+          detail_attributes.merge({
+            titles: [detail_attributes[:name], 'Videos'],
+            kind: 'video',
+            details: detail_identifier.call(item), 
+            transcript: transcript_identifier.call(item)
+          }),
           video_identifier.call(item)
         )
       end
@@ -42,7 +51,12 @@ preprocess do
   video_difficulties.each do |difficulty|
     items << Nanoc::Item.new(
       "<%= render 'difficulty_list' %>",
-      {difficulty: difficulty, kind: 'difficulty_list'},
+      {
+        difficulty: difficulty,
+        kind: 'difficulty_list',
+        titles: [difficulty.capitalize, 'Videos'],
+        body_css: 'videos'
+      },
       "/videos/#{difficulty}/"
     )
   end
@@ -50,7 +64,10 @@ preprocess do
   formula_categories.each do |category|
     items << Nanoc::Item.new(
       "<%= render 'category_list' %>",
-      {category: category, kind: 'category_list'},
+      {category: category,
+       kind: 'category_list',
+       titles: [category, 'Formulas'],
+       body_css: 'formulas'},
       "/formulas/#{category.downcase.split(' ').join('-')}/"
     )
   end
