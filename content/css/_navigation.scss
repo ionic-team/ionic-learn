@@ -2,7 +2,6 @@
   @include make-sm-column(4);
   @include make-lg-column(1);
   @include make-md-column(3);
-  margin-bottom: 30px;
   .logo { 
     margin-bottom: 50px;
     transition: 0.2s linear;

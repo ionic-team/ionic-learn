@@ -7989,6 +7989,8 @@ p {
 
 .container {
   margin-top: 40px; }
+  .container > .row {
+    margin-bottom: 100px; }
 
 .main-pane {
   position: relative;
@@ -8002,8 +8004,7 @@ p {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 30px; }
+  padding-right: 15px; }
   @media (min-width: 768px) {
     .main-pane {
       float: left;
@@ -8107,7 +8108,7 @@ header.cover {
 .formulas > footer a, .videos > footer a {
   background-color: #F2F6FA;
   padding: 10px;
-  margin: 20px 0 100px;
+  margin: 20px 0 0;
   color: #9CB1D4;
   display: flex;
   justify-content: space-between; }
@@ -8260,8 +8261,7 @@ footer.main {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 30px; }
+  padding-right: 15px; }
   @media (min-width: 768px) {
     .side-nav {
       float: left;

@@ -20,13 +20,15 @@ p {
 
 .container { 
   margin-top: 40px;
+  > .row {
+    margin-bottom: 100px;
+  }
 }
 
 .main-pane {
   @include make-sm-column(8);
   @include make-lg-column(11);
   @include make-md-column(9);
-  margin-bottom: 30px;
 }
 
 .cta-sub {
@@ -139,7 +141,7 @@ header.cover {
     a {
       background-color: #F2F6FA;
       padding: 10px;
-      margin: 20px 0 100px;
+      margin: 20px 0 0;
       color: #9CB1D4;
       display: flex;
       justify-content: space-between;
