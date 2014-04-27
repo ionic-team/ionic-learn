@@ -14,17 +14,17 @@
         %p.description=@item[:description]
       %iframe{allowfullscreen: "", frameborder: "0", height: "505", src: @item[:embed_code], width: "847"}
       %ul.nav.nav-tabs
-        %li
-          %a{"data-toggle" => "tab", href: "#details"} Details
         %li.active
+          %a{"data-toggle" => "tab", href: "#details"} Details
+        %li
           %a{"data-toggle" => "tab", href: "#transcript"} Transcript
         %li
           %a{"data-toggle" => "tab", href: "#similar-videos"} Similar Videos
         %li
           %a{"data-toggle" => "tab", href: "#scratchpad"} Scratchpad
       .tab-content
-        #details.tab-pane=@items[@item[:details]].compiled_content
-        #transcript.tab-pane.active
+        #details.tab-pane.active=@items[@item[:details]].compiled_content
+        #transcript.tab-pane
           %article=@items[@item[:transcript]].compiled_content
         #similar-videos.tab-pane
         #scratchpad.tab-pane
