@@ -26,9 +26,13 @@ var controller = ionic.controllers.ViewController.inherit({
 
 Consectetur repellendus enim dicta atque alias. Eius assumenda animi ratione error magni similique reiciendis! Alias nesciunt debitis illo nemo magnam.
 
+> Lorem mollitia voluptas dignissimos eaque eveniet amet architecto vitae culpa, accusantium? Velit fugiat porro impedit laborum eaque. Non eaque tempore doloribus laboriosam asperiores est aut non quia dolor. Est explicabo.
+{: .quote}
+
 Sit ut modi nostrum impedit explicabo unde rerum facilis tenetur quis impedit excepturi iusto perspiciatis illo ipsum quasi. Quidem nihil eligendi nihil possimus iste veritatis, laborum? Quo obcaecati magnam quo pariatur alias consequatur quo expedita rerum. Dolor at alias officiis eveniet sequi vel hic aut, sed ducimus non. Veritatis harum!
 
 > **Quick note:** most css properties can be clicked to obtain more contextual information. For example, try clicking `box-shadow`, and you will see a list of properties become available.
+{: .note}
 
 ## Finally...
 

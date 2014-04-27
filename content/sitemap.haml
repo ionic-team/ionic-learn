@@ -1,0 +1,1 @@
+= xml_sitemap items: @items.reject{|i| i == @item || i[:extension] == "scss" || i[:extension] == "js" || i[:is_hidden] || i.binary? }

@@ -33,6 +33,7 @@ preprocess do
   video_names.each do |item|
     detail_page = items[detail_identifier.call(item)]
     if !detail_page.nil? && detail_attributes = detail_page.attributes
+      last_modified = Date.parse(detail_attributes[:date]).to_time
       if detail_page[:live] == true
         items << Nanoc::Item.new(
           "<%= render 'video_detail' %>",
@@ -42,7 +43,8 @@ preprocess do
             details: detail_identifier.call(item), 
             transcript: transcript_identifier.call(item)
           }),
-          video_identifier.call(item)
+          video_identifier.call(item),
+          last_modified
         )
       end
     end
@@ -71,6 +73,14 @@ preprocess do
       "/formulas/#{category.downcase.split(' ').join('-')}/"
     )
   end
+end
+
+compile 'sitemap' do
+  filter :haml
+end
+
+route 'sitemap' do
+  item.identifier.chop + '.xml'
 end
 
 compile '/fonts/*' do
@@ -129,6 +139,7 @@ end
 
 route '/authors/bylines/*/' do
 end
+
 
 
 compile '*' do

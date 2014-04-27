@@ -8376,7 +8376,15 @@ footer.main {
     .content.formula .CodeRay pre, .content.video .CodeRay pre {
       border: none;
       border-radius: 5px; }
-  .content.formula blockquote, .content.video blockquote {
+  .content.formula blockquote.quote, .content.video blockquote.quote {
+    padding: 0 30px;
+    margin: 35px 0;
+    border-left: 9px solid #ebeff5;
+    font-style: italic; }
+    .content.formula blockquote.quote p, .content.video blockquote.quote p {
+      letter-spacing: 1px;
+      color: #b8c6dc; }
+  .content.formula blockquote.note, .content.video blockquote.note {
     position: relative;
     margin: 30px 0;
     padding: 20px 30px;
@@ -8384,7 +8392,7 @@ footer.main {
     border-radius: 2px;
     background: #eef5ff;
     color: #659df8; }
-    .content.formula blockquote:before, .content.video blockquote:before {
+    .content.formula blockquote.note:before, .content.video blockquote.note:before {
       content: "!";
       color: white;
       padding: 2px 0 0 16px;
@@ -8404,13 +8412,13 @@ footer.main {
       -webkit-transform: translate(0, -20px);
       -ms-transform: translate(0, -20px);
       transform: translate(0, -20px); }
-    .content.formula blockquote strong, .content.video blockquote strong {
+    .content.formula blockquote.note strong, .content.video blockquote.note strong {
       color: #4d8df7;
       font-weight: bold; }
-    .content.formula blockquote p, .content.video blockquote p {
+    .content.formula blockquote.note p, .content.video blockquote.note p {
       color: #4e8ef7;
       font-size: 17px; }
-    .content.formula blockquote code, .content.video blockquote code {
+    .content.formula blockquote.note code, .content.video blockquote.note code {
       color: #426fb9;
       font-size: 15px;
       background-color: transparent;

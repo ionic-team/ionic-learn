@@ -1,4 +1,5 @@
 include Nanoc::Helpers::Rendering
+include Nanoc3::Helpers::XMLSitemap
 
 def formulas
   @items.select { |item| item[:kind] == "formula" }

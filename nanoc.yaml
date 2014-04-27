@@ -3,6 +3,8 @@
 # will be considered as binary.
 text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml' ]
 
+base_url: http://learn.ionicframework.com
+
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
 # relative to the site directory.
