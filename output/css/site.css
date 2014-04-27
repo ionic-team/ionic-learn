@@ -8104,12 +8104,17 @@ header.cover {
 
 .formulas .description p, .videos .description p {
   font-size: 14px; }
-.formulas > footer, .videos > footer {
+.formulas > footer a, .videos > footer a {
   background-color: #F2F6FA;
   padding: 10px;
-  margin: 20px 0 100px; }
-  .formulas > footer a, .videos > footer a {
-    color: #9CB1D4; }
+  margin: 20px 0 100px;
+  color: #9CB1D4;
+  display: flex;
+  justify-content: space-between; }
+  .formulas > footer a i, .videos > footer a i {
+    line-height: 22px; }
+  .formulas > footer a:hover, .videos > footer a:hover {
+    color: #4d8df7; }
 
 .get-ionic-wrapper {
   position: fixed;
@@ -8178,44 +8183,70 @@ footer.main {
     margin-right: 100px;
     color: #c9d5e6; }
   footer.main .expand-wrapper .expand {
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
     display: inline-block;
-    background-color: #4d8df7;
+    background-color: #C9D5E6;
     display: inline-block;
     position: relative;
     cursor: pointer;
     margin-bottom: 2px; }
+    footer.main .expand-wrapper .expand:hover, footer.main .expand-wrapper .expand.expanded {
+      background-color: #4d8df7; }
+      footer.main .expand-wrapper .expand:hover:before, footer.main .expand-wrapper .expand:hover:after, footer.main .expand-wrapper .expand.expanded:before, footer.main .expand-wrapper .expand.expanded:after {
+        background-color: #4d8df7; }
     footer.main .expand-wrapper .expand:before, footer.main .expand-wrapper .expand:after {
       position: absolute;
       content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
       display: inline-block;
-      background-color: #4d8df7;
+      background-color: #C9D5E6;
       display: inline-block; }
     footer.main .expand-wrapper .expand:before {
       bottom: 0;
-      left: -10px; }
+      left: -8px; }
     footer.main .expand-wrapper .expand:after {
       bottom: 0;
-      right: -10px; }
+      right: -8px; }
   footer.main nav {
     font-family: "AvenirNextLTPro-Regular";
     display: inline-block;
-    text-indent: -800px;
-    overflow: hidden;
-    -webkit-transition: all 0.3s ease-out; }
+    margin-left: 85px;
+    opacity: 0; }
     footer.main nav.expanded {
-      text-indent: 90px; }
+      opacity: 1; }
     footer.main nav a {
       margin-right: 40px;
       font-size: 13px;
       color: #afccfb; }
       footer.main nav a:hover {
         color: #4e8ef7; }
+
+.video article h1 {
+  font-size: 26px; }
+.video .nav-tabs {
+  margin: 40px 0 25px;
+  border-bottom: 1px solid #ecf0f6; }
+  .video .nav-tabs li a {
+    font-size: 18px;
+    color: #dbe2ee;
+    padding: 10px 0;
+    margin-right: 60px;
+    border: none;
+    border-bottom: 1px solid #ecf0f6; }
+    .video .nav-tabs li a:hover {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #4d8df7;
+      color: #4d8df7;
+      border-radius: none; }
+  .video .nav-tabs li.active a {
+    color: #4d8df7;
+    border: none;
+    border-bottom: 1px solid #4d8df7; }
 
 .side-nav {
   position: relative;
@@ -8318,7 +8349,6 @@ footer.main {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     color: #B4BFD1;
-    margin-bottom: 45px;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 10px; }
@@ -8327,6 +8357,8 @@ footer.main {
       border-radius: 100px; }
     .content.formula .byline .author, .content.video .byline .author {
       margin-left: 5px; }
+  .content.formula .description, .content.video .description {
+    margin: 30px 0; }
   .content.formula h2, .content.video h2 {
     color: #1B2331;
     font-size: 20px;

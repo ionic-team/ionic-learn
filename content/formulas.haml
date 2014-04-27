@@ -16,4 +16,6 @@ body_css: "formulas"
       - related_formulas(category).each do |formula|
         = render "formula", formula: formula
     %footer
-      %a{href: category_path(category) } View all #{category} Formulas
+      %a{href: category_path(category)}
+        %span View all #{category} Formulas
+        %i.ion-chevron-right

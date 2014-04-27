@@ -6,7 +6,7 @@ date: April 22, 2014
 difficulty: beginner
 embed_code: //www.youtube.com/embed/1RQCjwnlTRk?hd=1
 length: 2
-description: Lorem culpa quos repellat assumenda delectus? Deserunt molestias aut vero amet qui, eum. Eum minus.
+description: In this video, I'll show you how to get started with Ionic and go over some of the details. Ipsum iusto officia pariatur voluptate cupiditate exercitationem ducimus sint. Deserunt!
 live: true
 ---
 

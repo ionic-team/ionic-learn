@@ -136,11 +136,19 @@ header.cover {
     }
   }
   > footer {
-    background-color: #F2F6FA;
-    padding: 10px;
-    margin: 20px 0 100px;
     a {
+      background-color: #F2F6FA;
+      padding: 10px;
+      margin: 20px 0 100px;
       color: #9CB1D4;
+      display: flex;
+      justify-content: space-between;
+      i {
+        line-height: 22px;
+      }
+      &:hover {
+        color: $ionicDarkBlue;
+      }
     }
   }
 }
@@ -224,37 +232,40 @@ footer.main {
   }
   .expand-wrapper {
     .expand {
-      @include circle(4px);
-      background-color: $ionicDarkBlue;
+      @include circle(3px);
+      background-color: #C9D5E6;
       display: inline-block;
       position: relative;
       cursor: pointer;
       margin-bottom: 2px;
+      &:hover, &.expanded {
+        background-color: $ionicDarkBlue;
+        &:before, &:after { background-color: $ionicDarkBlue; }
+      }
       &:before, &:after {
         position: absolute;
         content: "";
-        @include circle(4px);
-        background-color: $ionicDarkBlue;
+        @include circle(3px);
+        background-color: #C9D5E6;
         display: inline-block;
       }
       &:before {
         bottom: 0;
-        left: -10px;
+        left: -8px;
       }
       &:after {
         bottom: 0;
-        right: -10px;
+        right: -8px;
       }
     }
   }
   nav {
     font-family: "AvenirNextLTPro-Regular";
     display: inline-block;
-    text-indent: -800px;
-    overflow: hidden;
-    -webkit-transition: all 0.3s ease-out;
+    margin-left: 85px;
+    opacity: 0;
     &.expanded {
-      text-indent: 90px;
+      opacity: 1;
     }
     a {
       margin-right: 40px;
@@ -262,6 +273,42 @@ footer.main {
       color: lighten($ionicDarkBlue, 20%);
       &:hover {
         color: #4e8ef7;
+      }
+    }
+  }
+}
+
+.video {
+  article {
+    h1 {
+      font-size: 26px;
+    }
+  }
+  .nav-tabs {
+    margin: 40px 0 25px;
+    border-bottom: 1px solid $ruleColor;
+    li {
+      a { 
+        font-size: 18px;
+        color: darken($ruleColor, 5%); 
+        padding: 10px 0;
+        margin-right: 60px;
+        border: none;
+        border-bottom: 1px solid $ruleColor;
+        &:hover {
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid $ionicDarkBlue;
+          color: $ionicDarkBlue;
+          border-radius: none;
+        }
+      }
+      &.active {
+        a {
+          color: $ionicDarkBlue;
+          border: none;
+          border-bottom: 1px solid $ionicDarkBlue;
+        }
       }
     }
   }

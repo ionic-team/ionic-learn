@@ -5,6 +5,7 @@
     <meta charset='utf-8'>
     <title></title>
     <link href='/css/site.css' rel='stylesheet'>
+    <link href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css' rel='stylesheet'>
   </head>
   <body class='full-page no-js'>
     <script>
@@ -104,13 +105,14 @@
                   </span>
                   <time></time>
                 </div>
+                <p class='description'>In this video, I'll show you how to get started with Ionic and go over some of the details. Ipsum iusto officia pariatur voluptate cupiditate exercitationem ducimus sint. Deserunt!</p>
               </header>
               <iframe allowfullscreen='' frameborder='0' height='505' src='//www.youtube.com/embed/1RQCjwnlTRk?hd=1' width='847'></iframe>
               <ul class='nav nav-tabs'>
-                <li class='active'>
+                <li>
                   <a data-toggle='tab' href='#details'>Details</a>
                 </li>
-                <li>
+                <li class='active'>
                   <a data-toggle='tab' href='#transcript'>Transcript</a>
                 </li>
                 <li>
@@ -121,48 +123,35 @@
                 </li>
               </ul>
               <div class='tab-content'>
-                <div class='tab-pane active' id='details'>
+                <div class='tab-pane' id='details'>
                   <p>Consectetur sequi ducimus laboriosam non vel quos, laudantium doloribus. Voluptatibus quaerat tempora nesciunt laborum accusantium! Iste hic reiciendis error itaque maxime. Exercitationem molestias aliquam incidunt adipisci voluptatem amet. Totam omnis quibusdam a hic tempore quas vitae, aperiam temporibus accusantium voluptatem. Iste delectus corporis temporibus maiores earum, beatae repudiandae? Id odio!</p>
                   
                   <p>Lorem voluptatem laboriosam maiores consequatur ab? Vero ut temporibus dignissimos quisquam nulla voluptates atque. Soluta voluptatem eligendi recusandae optio necessitatibus.</p>
                   
                   <p><code>ruby&#x000A;        def foo&#x000A;          return "hi"&#x000A;        end&#x000A;        </code></p>
                 </div>
-                <div class='tab-pane' id='transcript'>
-                  <h1 id="getting-started">Getting Started</h1>
-                  
-                  <h2 id="intro">Intro</h2>
-                  
-                  <p>In this video we will learn about Ionic Framework for iOS development. Ionic Framework is a front-end framework for developing hybrid mobile apps with HTML5.</p>
-                  
-                  <h2 id="prerequisites">Prerequisites</h2>
-                  
-                  <p>To start using Ionic with iOS, you will need MacOSX with XCode, the XCode Command Line Tools, and node.js installed. Instructions for installing these pre-requisites are in the notes for this video.</p>
-                  
-                  <h2 id="node-modules">Node Modules</h2>
-                  
-                  <p>Once you finish installing the pre-requisites, install Ionic from the Node Package Manager (NPM). If you are new to Node.js, NPM is a package manager for node.js that will resolve your dependencies. Install Ionic now with <code>npm install -g ionic cordova ios-sim</code>.</p>
-                  
-                  <h2 id="explain-modules">Explain Modules</h2>
-                  <p>These modules are the basis for working with Ionic on iOS. The <code>ionic</code> module itself is the primary command line tool you will be working with. Cordova is Ionic's underlying platform for building native mobile applications using HTML, CSS, and JavaScript. The <code>ios-sim</code> module allows us to run the iOS simulator from the command line.</p>
-                  
-                  <h2 id="template-talk">Template Talk</h2>
-                  <p>We can now begin building apps with Ionic. Ionic ships with several templates, but we will start with a tabbed app. You can learn about other templates in the Getting Started guide in the notes for this video.</p>
-                  
-                  <h2 id="ionic-start">Ionic Start</h2>
-                  <p>To start a new tab-based application, type <code>ionic start tabsApp tabs</code>.</p>
-                  
-                  <h2 id="looking-at-contents">Looking at Contents</h2>
-                  <p>This will create a folder called tabsApp, so change into the folder. When we look at the folder's contents, we can see there is a lot happening. In the next video, we will break down the structure of an Ionic app and change our application. For now, we will get the application running in the iOS simulator.</p>
-                  
-                  <h2 id="add-platforms">Add Platforms</h2>
-                  <p>An Ionic application does not ship with any platforms installed. To turn our app into something runnable on a device, we need to add specific platforms we want to use. In this case, we want iOS. In the terminal, type <code>ionic platform add ios</code>. Once Ionic resolves its dependencies, we can run the application. </p>
-                  
-                  <h2 id="run">Run</h2>
-                  <p>Type <code>ionic emulate ios</code> to run the iOS simulator.</p>
-                  
-                  <h2 id="emulate">Emulate</h2>
-                  <p>Once it's running, we can now see that we have a working tabbed application. In the next video, we will talk about the structure of an Ionic project and begin customizing our app.</p>
+                <div class='tab-pane active' id='transcript'>
+                  <article>
+                    <p>In this video we will learn about Ionic Framework for iOS development. Ionic Framework is a front-end framework for developing hybrid mobile apps with HTML5.</p>
+                    
+                    <p>To start using Ionic with iOS, you will need MacOSX with XCode, the XCode Command Line Tools, and node.js installed. Instructions for installing these pre-requisites are in the notes for this video.</p>
+                    
+                    <p>Once you finish installing the pre-requisites, install Ionic from the Node Package Manager (NPM). If you are new to Node.js, NPM is a package manager for node.js that will resolve your dependencies. Install Ionic now with <code>npm install -g ionic cordova ios-sim</code>.</p>
+                    
+                    <p>These modules are the basis for working with Ionic on iOS. The <code>ionic</code> module itself is the primary command line tool you will be working with. Cordova is Ionic's underlying platform for building native mobile applications using HTML, CSS, and JavaScript. The <code>ios-sim</code> module allows us to run the iOS simulator from the command line.</p>
+                    
+                    <p>We can now begin building apps with Ionic. Ionic ships with several templates, but we will start with a tabbed app. You can learn about other templates in the Getting Started guide in the notes for this video.</p>
+                    
+                    <p>To start a new tab-based application, type <code>ionic start tabsApp tabs</code>.</p>
+                    
+                    <p>This will create a folder called tabsApp, so change into the folder. When we look at the folder's contents, we can see there is a lot happening. In the next video, we will break down the structure of an Ionic app and change our application. For now, we will get the application running in the iOS simulator.</p>
+                    
+                    <p>An Ionic application does not ship with any platforms installed. To turn our app into something runnable on a device, we need to add specific platforms we want to use. In this case, we want iOS. In the terminal, type <code>ionic platform add ios</code>. Once Ionic resolves its dependencies, we can run the application. </p>
+                    
+                    <p>Type <code>ionic emulate ios</code> to run the iOS simulator.</p>
+                    
+                    <p>Once it's running, we can now see that we have a working tabbed application. In the next video, we will talk about the structure of an Ionic project and begin customizing our app.</p>
+                  </article>
                 </div>
                 <div class='tab-pane' id='similar-videos'></div>
                 <div class='tab-pane' id='scratchpad'></div>

@@ -14,4 +14,6 @@ body_css: "videos"
       - related_videos(difficulty).each do |video|
         = render "video", video: video
     %footer
-      %a{href: difficulty_path(difficulty)} View all #{difficulty.capitalize} Formulas
+      %a{href: difficulty_path(difficulty)}
+        %span View all #{difficulty.capitalize} Formulas
+        %i.ion-chevron-right

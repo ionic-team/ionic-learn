@@ -4,6 +4,7 @@
     =render "meta_tags"
     %title=@item[:title]
     %link{rel: "stylesheet", href: @items['/css/site/'].path}
+    %link{rel: "stylesheet", href: "//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"}
 
   %body.full-page.no-js{class: @item[:body_css]}
     :javascript
