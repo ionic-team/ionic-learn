@@ -18,7 +18,7 @@ transcript_identifier = lambda { |id| "/videos/#{id}/transcript/" }
 video_identifier = lambda { |id| "/videos/#{id}"}
 
 preprocess do
-  video_items = items.select do |item| 
+  video_items = items.select do |item|
     split_item = item.identifier.split('/').delete_if(&:empty?)
     split_item.length > 1 and split_item.first == "videos"
   end
@@ -40,7 +40,7 @@ preprocess do
           detail_attributes.merge({
             titles: [detail_attributes[:name], 'Videos'],
             kind: 'video',
-            details: detail_identifier.call(item), 
+            details: detail_identifier.call(item),
             transcript: transcript_identifier.call(item)
           }),
           video_identifier.call(item),
@@ -139,6 +139,8 @@ end
 
 route '/authors/bylines/*/' do
 end
+
+passthrough "/CNAME/"
 
 
 
