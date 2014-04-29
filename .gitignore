@@ -1,3 +1,4 @@
 tmp/
 .sass-cache/
 crash.log
+output/
