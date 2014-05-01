@@ -23,6 +23,7 @@
               .similar-item
                 %a{href: a.path}=a[:title]
                 %p=a[:description]
+            -unless b.nil?
               .rule
               .similar-item
                 %a{href: b.path}=b[:title]
