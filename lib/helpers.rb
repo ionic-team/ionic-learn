@@ -2,8 +2,12 @@ include Nanoc::Helpers::Rendering
 include Nanoc3::Helpers::XMLSitemap
 require 'date'
 
+def all_formulas
+  @items.select { |item| item[:kind] == "formula" }
+end
+
 def formulas
-  @items.select { |item| item[:kind] == "formula" }.sort do |a, b|
+  all_formulas.select {|item| item[:draft] != true}.sort do |a, b|
     Date.parse(b[:date]) <=> Date.parse(a[:date])
   end
 end

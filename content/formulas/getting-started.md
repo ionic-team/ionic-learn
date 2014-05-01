@@ -2,11 +2,9 @@
 title: Getting Started with Ionic
 author: Gerred Dillon
 date: April 22, 2014
-layout: formula
 description: Sit optio soluta at laudantium doloremque a? Rerum aperiam voluptas sed beatae modi! Natus magni.
 difficulty: beginner
 reading_time: 3
-slug: getting-started
 category: Ionic Basics
 kind: formula
 ---

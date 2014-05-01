@@ -26,7 +26,7 @@ preprocess do
     item.identifier.split('/').delete_if(&:empty?)[1]
   end.uniq
 
-  formulas.each do |formula|
+  all_formulas.each do |formula|
     formula[:titles] = [formula[:title], "Formulas"]
   end
 
