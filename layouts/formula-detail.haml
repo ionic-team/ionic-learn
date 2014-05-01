@@ -13,10 +13,17 @@
         =author(@item[:author]).compiled_content
       ~ yield
       %section.scratchpad
-        %p Try this tutorial out below in the Scratchpad:
+        %p try this tutorial out below in the Scratchpad:
         %img{src: "http://placehold.it/750x500"}/
       %footer
         %h6 further reading
-        .list
-          - related_formulas.take(6).each do |formula|
-            = render "formula", formula: formula
+        .similar-items.list
+          - related_formulas.take(6).each_slice(2) do |a, b|
+            .item-row
+              .similar-item
+                %a{href: a.path}=a[:title]
+                %p=a[:description]
+              .rule
+              .similar-item
+                %a{href: b.path}=b[:title]
+                %p=b[:description]

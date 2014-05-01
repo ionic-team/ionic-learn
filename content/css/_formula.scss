@@ -136,3 +136,24 @@
   }
 }
 
+.similar-items.list {
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .similar-item {
+      display: inline-block;
+      width: 375px;
+      a {
+        font-size: 16px;
+      }
+    }
+    .rule {
+      width: 1px;
+      height: inherit;
+      background-color: $ruleColor;
+      margin: 20px 0;
+    }
+  }
+}

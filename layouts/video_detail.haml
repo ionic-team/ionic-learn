@@ -27,4 +27,14 @@
         #transcript.tab-pane
           %article=@items[@item[:transcript]].compiled_content
         #similar-videos.tab-pane
+          .similar-items.list
+            - related_videos.take(6).each_slice(2) do |a, b|
+              .item-row
+                .similar-item
+                  %a{href: a.path}=a[:title]
+                  %p=a[:description]
+                .rule
+                .similar-item
+                  %a{href: b.path}=b[:title]
+                  %p=b[:description]
         #scratchpad.tab-pane
