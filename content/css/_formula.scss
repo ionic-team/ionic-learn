@@ -1,4 +1,9 @@
 .content.formula, .content.video {
+  iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+  }
   nav {
     @include horizontal-rule(40px, 10px, $ruleColor, bottom);
     margin-top: 20px;

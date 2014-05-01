@@ -13,8 +13,8 @@
         =author(@item[:author]).compiled_content
       ~ yield
       %section.scratchpad
-        %p try this tutorial out below in the Scratchpad:
-        %img{src: "http://placehold.it/750x500"}/
+        %p Try this tutorial out below in the Scratchpad:
+        %iframe#scratch{src: '//scratch.ionicsdk.com/embed'}
       %footer
         %h6 further reading
         .similar-items.list
@@ -28,3 +28,11 @@
               .similar-item
                 %a{href: b.path}=b[:title]
                 %p=b[:description]
+    -content_for :javascripts do
+      :javascript
+        var scratch = new IonicScratch({
+          el: document.getElementById('scratch'),
+          width: '100%',
+          height: '600px'
+        });
+
