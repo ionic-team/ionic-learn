@@ -9,7 +9,7 @@ category: Ionic Basics
 kind: formula
 draft: true
 ---
-There are several ways to create a header at the top of the screen in Ionic. Distinct differences exit between the navigation bar and the header bar and their uses within the framework. In this formula, we will create both types and explore the differences.
+There are several ways to create a header at the top of the screen in Ionic. Distinct differences exist between the navigation bar and the header bar and their uses within the framework. In this formula, we will create both types and explore the differences while introducing ourselves to Ionic's navigation view.
 
 ### A basic header
 
@@ -68,7 +68,7 @@ This makes `ion-header-bar` great for simple views that don't need complex state
 
 ### Navigate... this way
 
-Our app is now getting more complicated. We now want to dive into a detail view to find more information about prior screens, add detail pages to the detail pages, and other things that makes for a useful app. To do this, we refactor our codebase to a simple implemetation of `ion-nav-view`:
+Our app is now getting more complicated. We now want to dive into a detail view to find more information about prior screens, add detail pages to the detail pages, and other things that make for a useful app. To do this, we refactor our codebase to a simple implemetation of `ion-nav-view`:
 
 ~~~html
 <body ng-app="ionicApp">
@@ -78,10 +78,8 @@ Our app is now getting more complicated. We now want to dive into a detail view 
 </body>
 ~~~
 
-Where'd our header go?! Running this code reveals an empty page. Considering we just removed it from our markup, this makes sense. A blank app is useful to nobody though. To restore balance to our app and see something more useful, we need to integrate [AngularUI Router](https://github.com/angular-ui/ui-router). From the ui-router GitHub project:
+Where'd our header go?! Running this code reveals an empty page. Considering we just removed it from our markup, this makes sense. A blank app is useful to nobody though. To restore balance to our app and see something more useful, we need to integrate Ionic's router.
 
-> AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine. Unlike the $route service in Angular core, which is organized around URL routes, UI-Router is organized around states, which may optionally have routes, as well as other behavior, attached.
-{: .quote}
 
 In this instance, we will create the simplest possible implementation:
 
@@ -126,9 +124,11 @@ In this instance, we will create the simplest possible implementation:
 
 A lot has changed since the last example. We'll break it down into steps.
 
-#### 1. Configure ui-router
+#### 1. Configure Ionic's router
 
-To activate Ionic's navigation system, we need to configure ui-router's states. To do this, we setup the states with `$stateProvider`, with `$urlRouterProvider` letting us specify the default route when loading the module. For the uniniated to ui-router, it includes other options to help make complex tasks simple. To load the template, we specify the file. Angular will search `$templateCache` for this, and only request it if it's not already available in the cache.
+To activate Ionic's navigation system, we need to configure the router's states. To do this, we setup the states with `$stateProvider`, with `$urlRouterProvider` letting us specify the default route when loading the module. For the uniniated to the router, it includes other options to help make complex tasks simple. To load the template, we specify the file. Angular will search `$templateCache` for this, and only request it if it's not already available in the cache.
+
+In another formula we will go over Ionic's navigation in depth. For now, we will focus on adding a navbar.
 
 
 #### 2. Setup home.html view
