@@ -1,5 +1,5 @@
 ---
-title: Navigating Our Way
+name: Navigating Our Way
 author: Gerred Dillon
 date: May 1, 2014
 description: Ionic includes multiple ways to display a header at the top of the screen. Learn the difference between nav bars and header bars, and when to use each.
@@ -92,10 +92,10 @@ In this instance, we will create the simplest possible implementation:
   <script src="http://code.ionicframework.com/1.0.0-beta.1/js/ionic.bundle.js"></script>
   <script>
     var app = angular.module('ionicApp', ['ionic'])
-    
+
     app.config(function($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/')
-      
+
       $stateProvider
       .state('home', {
         url: '/',
@@ -109,7 +109,7 @@ In this instance, we will create the simplest possible implementation:
   <ion-nav-bar class="bar-energized nav-title-slide-ios7">
   </ion-nav-bar>
   <ion-nav-view></ion-nav-view>
-  
+
   <script id='home.html' type='text/ng-template'>
     <ion-view title="Our Awesome Header">
       <ion-content>
@@ -151,10 +151,10 @@ Adding a detail page, complete with an animated view pushing on top of our old v
   <script src="http://code.ionicframework.com/1.0.0-beta.1/js/ionic.bundle.js"></script>
   <script>
     var app = angular.module('ionicApp', ['ionic'])
-    
+
     app.config(function($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/')
-      
+
       $stateProvider
       .state('home', {
         url: '/',
@@ -175,7 +175,7 @@ Adding a detail page, complete with an animated view pushing on top of our old v
     </ion-nav-back-button>
   </ion-nav-bar>
   <ion-nav-view></ion-nav-view>
-  
+
   <script id='home.html' type='text/ng-template'>
     <ion-view title="Our Awesome Header">
       <ion-content>
@@ -184,7 +184,7 @@ Adding a detail page, complete with an animated view pushing on top of our old v
       </ion-content>
     </ion-view>
   </script>
-  
+
     <script id='detail.html' type='text/ng-template'>
     <ion-view title="Detail Page">
       <ion-content>

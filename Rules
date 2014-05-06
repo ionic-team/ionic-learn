@@ -106,7 +106,7 @@ ignore '/css/*'
 compile '/formulas/*' do
   if item[:extension] == "md"
     filter :kramdown, coderay_line_numbers: nil, smart_quotes: ['apos', 'apos', 'quot', 'quot']
-    layout 'formula-detail'
+    layout 'formula_detail'
   elsif item[:extension] == "haml"
     filter :haml
     layout 'default'

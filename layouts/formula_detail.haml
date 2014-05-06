@@ -30,9 +30,19 @@
                 %p=b[:description]
     -content_for :javascripts do
       :javascript
-        var scratch = new IonicScratch({
-          el: document.getElementById('scratch'),
-          width: '100%',
-          height: '600px'
-        });
+        $(function() {
+          var getTemplate = function(url) {
+            return $.ajax({url: location.pathname + '/' + url, dataType: 'text'})
+          }
 
+          $.when(getTemplate('template.html'), getTemplate('style.css'), getTemplate('script.js')).then(function(html, css, js) {
+            var scratch = new IonicScratch({
+              el: document.getElementById('scratch'),
+              width: '100%',
+              height: '600px',
+              html: html[0],
+              css: css[0],
+              js: js[0]
+            });
+          })
+        })

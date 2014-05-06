@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="http://code.ionicframework.com/1.0.0-beta.1/css/ionic.min.css" />
+  <script src="http://code.ionicframework.com/1.0.0-beta.1/js/ionic.bundle.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+  <ion-tabs class="tabs-dark tabs-icon-top">
+    <ion-tab title="Header" icon="ion-home" ng-controller="HeaderCtrl">
+      <ion-header-bar class="bar-energized">
+        <h1 class="title">Headers Example</h1>
+        <div class="buttons">
+          <button class="ion-document-text button icon button-clear" ng-click="openModal()"></button>
+        </div>
+      </ion-header-bar>
+      <ion-content class="padding">
+        <p>{{description}}</p>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">First Name</span>
+            <input type="text" ng-model="user.firstName">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Last Name</span>
+            <input type="text" ng-model="user.lastName">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Email</span>
+            <input type="email" ng-model="user.email">
+          </label>
+        </div>
+      </ion-content>
+    </ion-tab>
+    <ion-tab title="Nav" icon="ion-map" ng-controller="NavCtrl" ui-sref="nav.home">
+      <ion-nav-bar class="bar-positive" animation="nav-title-slide-ios7">
+        <ion-nav-back-button class="button button-clear icon ion-arrow-left-c"></ion-nav-back-button>
+      </ion-nav-bar>
+      <ion-nav-view animation="slide-left-right"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+
+  <script type="text/ng-template" id="modal.html">
+    <div class="modal">
+      <ion-header-bar>
+        <h1 class="title">{{user.firstName}} {{user.lastName}}</h1>
+        <div class="buttons">
+          <button class="button button-clear icon ion-close" ng-click="closeModal()"></button>
+        </div>
+      </ion-header-bar>
+      <ion-content>
+        <div class="list card">
+          <div class="item item-avatar">
+            <img src="http://placekitten.com/30/30">
+            <h2>{{user.firstName}} {{user.lastName}}</h2>
+            <p>{{user.email}}</p>
+          </div>
+          <div class="item item-image">
+            <img src="http://placekitten.com/200/150">
+          </div>
+          <div class="item item-divider">Close the modal to change your info</div>
+        </div>
+      </ion-content>
+    </div>l
+  </script>
+
+  <script type="text/ng-template" id="nav.html">
+    <ion-nav-view></ion-nav-view>
+  </script>
+
+  <script type="text/ng-template" id="nav-home.html">
+    <ion-view title="Navbar Example">
+      <ion-content class="padding">
+        <p>Navbars are part of Ionic's routing system, built on top of ui-router. This useful for situations that require more complicated view heirarchies with many states. Ionic's navigation system maintains a state history that allows for seamless view traversal.</p>
+        <p>When using navbars, the title text is driven by a view's title attribute.</p>
+        <a class="button icon icon-right ion-chevron-right" ui-sref="nav.level-2">More Information</a>
+      </ion-content>
+    </ion-view>
+
+  </script>
+
+  <script type="text/ng-template" id="nav-level-2.html">
+    <ion-view title="Navbar Example - More Info">
+      <ion-content class="padding">
+      <p>When used with tabs, Ionic's routing system can maintain the state history of several views at once.</p>
+      <div class="row row-center">
+        <div class="col">
+          <h1 class="padding-left"><i class='icon ion-star energized'></i></h1>
+        </div>
+        <div class='col-80'>
+          <p>Note that switching tabs will remove the back button from the Navbar example's header. In this example, the tab system is not part of Ionic's router.</p>
+        </div>
+      </div>
+      <a class="button icon ion-home" ui-sref="nav.home"> Home</a>
+      </ion-content>
+    </ion-view>
+
+  </script>
+</body>
+
+</html>
