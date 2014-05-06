@@ -113,7 +113,7 @@ end
 
 compile '/formulas/*' do
   if item[:extension] == "md"
-    filter :kramdown, coderay_line_numbers: nil, smart_quotes: ['apos', 'apos', 'quot', 'quot']
+    filter :kramdown, coderay_line_numbers: nil, coderay_css: :class
     layout 'formula_detail'
   elsif item[:extension] == "haml"
     filter :haml
@@ -124,7 +124,7 @@ compile '/formulas/*' do
 end
 
 compile '/videos/*/*/' do
-  filter :kramdown, coderay_line_numbers: nil, smart_quotes: ['apos', 'apos', 'quot', 'quot']
+  filter :kramdown, coderay_line_numbers: nil, coderay_css: :class
 end
 
 route '/videos/*/*/' do
