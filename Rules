@@ -103,6 +103,14 @@ end
 
 ignore '/css/*'
 
+route '/formulas/*/*' do
+  if item[:extension] == "md"
+    item.identifier.gsub('article/', '') + 'index.html'
+  else
+    item.identifier.chop + '.' + item[:extension]
+  end
+end
+
 compile '/formulas/*' do
   if item[:extension] == "md"
     filter :kramdown, coderay_line_numbers: nil, smart_quotes: ['apos', 'apos', 'quot', 'quot']
