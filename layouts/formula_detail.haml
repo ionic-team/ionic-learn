@@ -9,7 +9,7 @@
         %i.ion-share
     %article
       %header
-        %h1=@item[:title]
+        %h1=@item[:name]
         =author(@item[:author]).compiled_content
       ~ yield
       %section.scratchpad
@@ -21,12 +21,12 @@
           - related_formulas.take(6).each_slice(2) do |a, b|
             .item-row
               .similar-item
-                %a{href: a.path}=a[:title]
+                %a{href: a.path}=a[:name]
                 %p=a[:description]
             -unless b.nil?
               .rule
               .similar-item
-                %a{href: b.path}=b[:title]
+                %a{href: b.path}=b[:name]
                 %p=b[:description]
     -content_for :javascripts do
       :javascript

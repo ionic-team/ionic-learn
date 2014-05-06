@@ -4,15 +4,15 @@
       %img{src: "/img/formula-icon-lg@2x.png", width: 58, height: 58, alt: 'Formula Icon'}
   .summary
     %h3
-      %a{href: formula.path}=formula[:title]
+      %a{href: formula.path}=formula[:name]
       %span.difficulty{class: formula[:difficulty], "data-toggle" => "tooltip", "data-placement" => "right", title: formula[:difficulty].capitalize}
     %p.subhead
       =formula[:date]
       &nbsp;|
       %time.reading-time
         =formula[:reading_time]
-        min read 
-        | 
+        min read
+        |
         =formula[:difficulty].capitalize
     .description
       %p=formula[:description]
