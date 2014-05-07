@@ -14,3 +14,7 @@ To watch files:
 
 guard
 ```
+
+## Contributing
+
+Still working out contribution guidelines for content. Otherwise, the code is MIT licensed.
