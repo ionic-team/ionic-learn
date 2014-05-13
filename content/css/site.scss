@@ -18,7 +18,7 @@ p {
   font-weight: 200;
 }
 
-.container { 
+.container {
   margin-top: 40px;
   > .row {
     margin-bottom: 100px;
@@ -49,10 +49,10 @@ a {
   -webkit-transition: 0.1s linear;
 }
 a:hover, a:focus {
-  color: #74A8FF; 
+  color: #74A8FF;
 }
 a:focus {
-  outline: none; 
+  outline: none;
 }
 
 ul {
@@ -66,10 +66,10 @@ header.cover {
 }
 
 .recent {
-  h2 { 
+  h2 {
     color: #292D32;
     margin-top: 80px;
-    @include horizontal-rule(20px, 5px, #ECF0F6, bottom); 
+    @include horizontal-rule(20px, 5px, #ECF0F6, bottom);
   }
 }
 
@@ -96,9 +96,9 @@ header.cover {
 
     a {
       color: #292d32;
-    } 
+    }
     a:hover, a:focus {
-    color: #4f8ef7 !important; 
+    color: #4f8ef7 !important;
     }
 
   }
@@ -233,7 +233,7 @@ footer.main {
   .attribution {
     font-family: "AvenirNextLTPro-Regular";
     font-size: 12px;
-    margin-right: 100px; 
+    margin-right: 100px;
     color: darken($ruleColor, 10%);
   }
   .expand-wrapper {
@@ -265,7 +265,12 @@ footer.main {
       }
     }
   }
-  nav {
+  nav#nav {
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     font-family: "AvenirNextLTPro-Regular";
     display: inline-block;
     margin-left: 85px;
@@ -294,9 +299,9 @@ footer.main {
     margin: 40px 0 25px;
     border-bottom: 1px solid $ruleColor;
     li {
-      a { 
+      a {
         font-size: 18px;
-        color: darken($ruleColor, 5%); 
+        color: darken($ruleColor, 5%);
         padding: 10px 0;
         margin-right: 60px;
         border: none;
