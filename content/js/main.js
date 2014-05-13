@@ -18,19 +18,19 @@ $(function() {
   $('.expand').on('click', function() {
     if ($(this).hasClass('expanded')) {
       $('footer.main nav')
-      .addClass('animated bounceOutLeft')
+      .addClass('animated fadeOutLeft')
       .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() { $(this).removeClass('expanded'); });
-      
+
     } else {
-      $('footer.main nav').addClass('expanded animated bounceInLeft');
+      $('footer.main nav').addClass('expanded animated fadeInLeft');
     }
     $(this, '.expand-wrapper .expand').toggleClass('expanded');
   });
 
   $('footer.main nav').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e) {
-    $(this).removeClass('animated bounceInLeft bounceOutLeft');
+    $(this).removeClass('animated fadeInLeft fadeOutLeft');
   });
-  
+
 
   if (viewedCta) {
     $('.get-ionic-wrapper').hide();
