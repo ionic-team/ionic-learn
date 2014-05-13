@@ -36,7 +36,7 @@
   }
 
   .byline {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     color: #B4BFD1;
     @include uppercase-title(10px);
@@ -66,6 +66,9 @@
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
+  }
+  article > p {
+    margin: 25px 0;
   }
 
   .CodeRay {
@@ -127,12 +130,12 @@
       margin: 50px 0;
     }
   }
-  
+
   footer {
     @include horizontal-rule(40px, 20px, $ruleColor);
     margin-bottom: 40px;
     h6 {
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 300;
       color: #B4BFD1;
       margin-bottom: 45px;
