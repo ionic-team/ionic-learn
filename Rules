@@ -103,7 +103,7 @@ end
 
 ignore '/css/*'
 
-route '/formulas/*/*' do
+route '/formulas/*/*/' do
   if item[:extension] == "md"
     item.identifier.gsub('article/', '') + 'index.html'
   elsif item[:extension]
@@ -111,7 +111,7 @@ route '/formulas/*/*' do
   end
 end
 
-compile '/formulas/*' do
+compile '/formulas/*/' do
   if item[:extension] == "md"
     filter :kramdown, coderay_line_numbers: nil, coderay_css: :class
     layout 'formula_detail'

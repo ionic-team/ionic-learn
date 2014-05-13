@@ -17,7 +17,7 @@ def related_formulas(category = @item[:category])
 end
 
 def formula_categories
-  formulas.map { |item| item[:category] }.uniq
+  all_formulas.map { |item| item[:category] }.uniq
 end
 
 def category_path(category)
