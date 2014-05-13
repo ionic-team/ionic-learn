@@ -7,7 +7,6 @@ difficulty: beginner
 reading_time: 3
 category: Ionic Basics
 kind: formula
-draft: true
 ---
 There are several ways to create a header at the top of the screen in Ionic. Distinct differences exist between the navigation bar and the header bar and their uses within the framework. In this formula, we will create both types and explore the differences while introducing ourselves to Ionic's navigation view.
 

@@ -4,9 +4,6 @@
       %a.left{href: @items['/videos/'].path}
         %i.ion-chevron-left
         %span{:style => "margin-left:-5px;"} All Videos
-      %a.right.scratchpad-share{href: "/scratchpad"}
-        %span Open Scratchpad
-        %i.ion-share
     %article
       %header
         %h1=@item[:name]
@@ -20,8 +17,9 @@
           %a{"data-toggle" => "tab", href: "#transcript"} Transcript
         %li
           %a{"data-toggle" => "tab", href: "#similar-videos"} Similar Videos
-        %li
-          %a{"data-toggle" => "tab", href: "#scratchpad"} Scratchpad
+        -if @item[:scratchpad] == true
+          %li
+            %a{"data-toggle" => "tab", href: "#scratchpad"} Scratchpad
       .tab-content
         #details.tab-pane.active=@items[@item[:details]].compiled_content
         #transcript.tab-pane
@@ -31,10 +29,12 @@
             - related_videos.take(6).each_slice(2) do |a, b|
               .item-row
                 .similar-item
-                  %a{href: a.path}=a[:title]
+                  %a{href: a.path}=a[:name]
                   %p=a[:description]
-                .rule
-                .similar-item
-                  %a{href: b.path}=b[:title]
-                  %p=b[:description]
-        #scratchpad.tab-pane
+                -unless b.nil?
+                  .rule
+                  .similar-item
+                    %a{href: b.path}=b[:name]
+                    %p=b[:description]
+        -if @item[:scratcpad] == true
+          #scratchpad.tab-pane

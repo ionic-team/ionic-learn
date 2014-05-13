@@ -3,10 +3,7 @@
     %nav
       %a.left{href: @items['/formulas/'].path}
         %i.ion-chevron-left
-        %span{:style => "margin-left:-5px;"} All Formulas
-      %a.right.scratchpad-share{href: "/scratchpad",target: "_blank"}
-        %span Open Scratchpad
-        %i.ion-share
+        %span{:style => "margin-left:-5px;"} All Formulass
     %article
       %header
         %h1=@item[:name]
@@ -15,19 +12,20 @@
       %section.scratchpad
         %p Try this tutorial out below in the Scratchpad:
         #scratch
-      %footer
-        %h6 further reading
-        .similar-items.list
-          - related_formulas.take(6).each_slice(2) do |a, b|
-            .item-row
-              .similar-item
-                %a{href: a.path}=a[:name]
-                %p=a[:description]
-            -unless b.nil?
-              .rule
-              .similar-item
-                %a{href: b.path}=b[:name]
-                %p=b[:description]
+      -if related_formulas.size > 0
+        %footer
+          %h6 further reading
+          .similar-items.list
+            - related_formulas.take(6).each_slice(2) do |a, b|
+              .item-row
+                .similar-item
+                  %a{href: a.path}=a[:name]
+                  %p=a[:description]
+              -unless b.nil?
+                .rule
+                .similar-item
+                  %a{href: b.path}=b[:name]
+                  %p=b[:description]
     -content_for :javascripts do
       :javascript
         $(function() {

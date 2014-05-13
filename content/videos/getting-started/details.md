@@ -1,22 +1,21 @@
 ---
-layout: videos
-name: "H1: Video Introduction to Ionic"
+name: "Introduction to Ionic for iOS"
 author: Gerred Dillon
 date: April 22, 2014
 difficulty: beginner
 embed_code: //www.youtube.com/embed/1RQCjwnlTRk?hd=1
 length: 2
-description: In this video, I'll show you how to get started with Ionic and go over some of the details. Ipsum iusto officia pariatur voluptate cupiditate exercitationem ducimus sint. Deserunt!
+description: Learn how to start using Ionic for iOS with this video. An introduction, prerequisites, and getting a basic application running on a simulator will all be shown.
 live: true
+scratchpad: false
 ---
 
-Consectetur sequi ducimus laboriosam non vel quos, laudantium doloribus. Voluptatibus quaerat tempora nesciunt laborum accusantium! Iste hic reiciendis error itaque maxime. Exercitationem molestias aliquam incidunt adipisci voluptatem amet. Totam omnis quibusdam a hic tempore quas vitae, aperiam temporibus accusantium voluptatem. Iste delectus corporis temporibus maiores earum, beatae repudiandae? Id odio!
+## Resources:
 
-Lorem voluptatem laboriosam maiores consequatur ab? Vero ut temporibus dignissimos quisquam nulla voluptates atque. Soluta voluptatem eligendi recusandae optio necessitatibus.
+[Ionic Documentation](http://ionicframework.com/docs/)
 
+[Apache Cordova](http://cordova.apache.org/)
 
-```ruby
-def foo
-  return "hi"
-end
-```
+[node.js Project Homepage](http://nodejs.org/)
+
+[Apache Cordova - Getting started with iOS](http://cordova.apache.org/docs/en/2.5.0/guide_getting-started_ios_index.md.html)
