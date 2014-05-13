@@ -1,5 +1,5 @@
 ---
-name: Navigating Our Way
+name: Navigating Ionic's Headers
 author: Gerred Dillon
 date: May 1, 2014
 description: Ionic includes multiple ways to display a header at the top of the screen. Learn the difference between nav bars and header bars, and when to use each.
