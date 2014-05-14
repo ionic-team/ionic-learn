@@ -66,7 +66,7 @@ Often our backend data is modelled in a way that naturally fits into the client-
 
 Additionally, backend services that work on individual models like this often implement a RESTful API where we can easily create, read, update, and delete individual items, or grab lists of items.
 
-For the sake of this example, let's assume we have an API for posts. This API has a few endpoints and access some common HTTP verbs:
+For the sake of this example, let's assume we have an API for posts. This API has a few endpoints supporting some common HTTP verbs:
 
 ~~~
 GET /api/post - Lists all posts
@@ -86,7 +86,7 @@ angular.module('ionicApp', ['ngResource'])
 });
 ~~~
 
-In the example above, note we've added a requirement to import the `ngResource` module. You'll also need to include the `angular-resource.js` script include.
+In the example above, we are now importing the `ngResource` module. You'll also need to include the `angular-resource.js` script include.
 
 Notice we've also opted for an Angular Factory. This makes using a `Post` easy in our code, and we can treat it as a natural data model:
 
