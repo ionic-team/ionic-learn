@@ -7,13 +7,14 @@ difficulty: beginner
 reading_time: 10
 category: Ionic AngularJS Backend
 kind: formula
+draft: true
 ---
 
 ## Backend Services
 
-What is a mobile app without interesting data? It seems nearly every app we used todayis sending and receiving data from a remote location, and letting us share our own data with the world.
+What is a mobile app without interesting data? It seems nearly every app we use today is sending and receiving data from a remote location, and letting us share our own data with the world.
 
-Luckily, adding backend-powered functionality to a mobile app is incredibly easy with AngularJS.
+Luckily, adding backend functionality to a mobile app is incredibly easy with AngularJS.
 
 ### $http
 
