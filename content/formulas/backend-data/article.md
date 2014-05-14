@@ -7,7 +7,6 @@ difficulty: beginner
 reading_time: 10
 category: Ionic AngularJS Backend
 kind: formula
-draft: true
 ---
 
 ## Backend Services
