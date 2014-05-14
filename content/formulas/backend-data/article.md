@@ -5,7 +5,7 @@ date: May 14, 2014
 description: AngularJS makes interacting with backend data and APIs incredibly easy. Follow this formula to see simple ways to make HTTP calls, and more powerful ways to model data objects on the server.
 difficulty: beginner
 reading_time: 10
-category: Ionic AngularJS Backend
+category: AngularJS
 kind: formula
 ---
 
