@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+  <body ng-controller="MainCtrl">
+    <ion-header-bar class="bar-positive">
+      <div class="buttons">
+        <button class="button" ng-click="data.showDelete = !data.showDelete">Delete</button>
+      </div>
+      <h1 class="title">Infinite List</h1>
+      <div class="buttons">
+        <button class="button" ng-click="data.showReorder = !data.showReorder">Reorder</button>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list show-reorder="data.showReorder" show-delete="data.showDelete">
+        <ion-item ng-repeat="item in items">
+          <p>{{item.title}}</p>
+          <ion-delete-button class="ion-minus-circled" ng-click="items.splice($index, 1)"></ion-delete-button>
+          <ion-reorder-button class="ion-navicon"
+                    on-reorder="reorderItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+          <ion-option-button class="button-positive" ng-click="editItem(item)">Edit</ion-option-button>
+
+        </ion-item>
+         <ion-infinite-scroll on-infinite="addItems()"></ion-infinite-scroll>
+       </ion-list>
+    </ion-content>
+
+  </body>
+</html>
