@@ -121,6 +121,6 @@ module.config(function($compileProvider){
 
 ## Example Project
 
-For a quick example that ties all of the lessons here together, take a look at the [Cordova Camera](https://github.com/driftyco/ionic-example-cordova-camera) example in the repo! Here's a screenshot of it in action:
+For a quick example that ties all of the lessons here together, take a look at the [Cordova Camera](https://github.com/driftyco/ionic-example-cordova-camera) example app using Ionic! Here's a screenshot of it in action:
 
 <img src="/img/formulas/camera/photo.png" class="screenshot">
