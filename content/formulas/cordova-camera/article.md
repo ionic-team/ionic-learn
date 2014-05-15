@@ -62,6 +62,7 @@ function takePicture() {
     // Ruh-roh, something bad happened
 
   }, cameraOptions);
+}
 
 ~~~
 
