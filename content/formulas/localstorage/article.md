@@ -13,7 +13,7 @@ Being able to persist data locally in an app is crucial. The large variance in m
 
 Fortunately, with web technologies storing data locally is fast and easy.
 
-### Local Storage
+## Local Storage
 
 
 Browsers provide a convenient module for storing data in a simple key <-> value fashion called `localStorage`. This is an object on `window` that we can get and set String values easily with:
@@ -29,7 +29,7 @@ In this example, we set the `'name'` key to have the value `'Max'`. When we grab
 
 In localStorage, we can only set String values. But we'll see soon that this isn't much of a problem.
 
-### Storing Objects
+## Storing Objects
 
 Since we can only store Strings in localStorage, how would we store objects? Well, we just have to convert them to JSON first!
 
@@ -46,7 +46,7 @@ var post = JSON.parse(window.localStorage['post'] || '{}');
 
 the `post` variable will now contain the full object. The same can be done for arrays or any other object!
 
-### iCloud Backup
+## iCloud Backup
 
 When using `localStorage` in a mobile app that you intend to deploy to the Apple App Store, you must take into account iCloud storage and the iOS Data Storage Guidelines which suggest, among other things, that only data the user *creates* should be backed up to iCloud.
 
@@ -61,7 +61,7 @@ To make sure data stored in `localStorage` does not get backed up to iCloud and 
 </widget>
 ~~~
 
-### AngularJS Service
+## AngularJS Service
 
 Using `window.localStorage` directly is just fine, but having to set and parse Strings gets tiresome after a while. Use this simple AngularJS service for setting and retrieving strings or objects easily:
 
@@ -105,7 +105,7 @@ angular.module('app', ['ionic', 'ionic.utils'])
 });
 ~~~
 
-### Suggestions
+## Suggestions
 
 Since `localStorage` is a very simple way to store String values for keys, it's no substitue for a real database. I suggest using Local Storage to persist a small number of larger objects.
 
