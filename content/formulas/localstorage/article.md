@@ -1,5 +1,6 @@
 ---
 name: Using Local Storage
+tweet: Use Local Storage for persisting data in your hybrid mobile apps with Ionic
 author: Max Lynch
 date: May 14, 2014
 description: Mobile apps require seamless online and offline functionality, in large part due to the reliability of current mobile networks, and to reduce network requests that take time and hurt battery life. Learn how to use Local Storage to persist data for fast and reliable offline access.

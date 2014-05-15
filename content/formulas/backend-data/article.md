@@ -1,5 +1,6 @@
 ---
 name: Integrating a Backend Service with AngularJS
+tweet: Integrate a backend service into your hybrid apps with AngularJS and Ionic
 author: Max Lynch
 date: May 14, 2014
 description: AngularJS makes interacting with backend data and APIs incredibly easy. Follow this formula to see simple ways to make HTTP calls, and more powerful ways to model data objects on the server.
@@ -8,8 +9,6 @@ reading_time: 10
 category: AngularJS
 kind: formula
 ---
-
-## Backend Services
 
 What is a mobile app without interesting data? It seems nearly every app we use today is sending and receiving data from a remote location, and letting us share our own data with the world.
 

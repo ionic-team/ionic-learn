@@ -1,5 +1,6 @@
 ---
 name: Using the Cordova Camera API
+tweet: Add photos and video to your @cordova, @AngularJS, and Ionic mobile apps
 author: Max Lynch
 date: May 14, 2014
 description: Taking photos and video is an everyday task for most mobile users. Learn how to easily add photo and video functionality to your apps with the Cordova Camera API.
