@@ -9,9 +9,10 @@
         %h1=@item[:name]
         =author(@item[:author]).compiled_content
       ~ yield
-      %section.scratchpad
-        %p Try this tutorial out below in the Scratchpad:
-        #scratch
+      -unless @item[:scratchpad] == false
+        %section.scratchpad
+          %p Try this tutorial out below in the Scratchpad:
+          #scratch
       -if related_formulas.size > 0
         %footer
           %h6 further reading
@@ -26,21 +27,22 @@
                 .similar-item
                   %a{href: b.path}=b[:name]
                   %p=b[:description]
-    -content_for :javascripts do
-      :javascript
-        $(function() {
-          var getTemplate = function(url) {
-            return $.ajax({url: location.pathname + '/' + url, dataType: 'text'})
-          }
+    -unless @item[:scratchpad] == false
+      -content_for :javascripts do
+        :javascript
+          $(function() {
+            var getTemplate = function(url) {
+              return $.ajax({url: location.pathname + '/' + url, dataType: 'text'})
+            }
 
-          $.when(getTemplate('template.html'), getTemplate('style.css'), getTemplate('script.js')).then(function(html, css, js) {
-            var scratch = new IonicScratch({
-              el: document.getElementById('scratch'),
-              width: '100%',
-              height: '600px',
-              html: html[0],
-              css: css[0],
-              js: js[0]
-            });
+            $.when(getTemplate('template.html'), getTemplate('style.css'), getTemplate('script.js')).then(function(html, css, js) {
+              var scratch = new IonicScratch({
+                el: document.getElementById('scratch'),
+                width: '100%',
+                height: '600px',
+                html: html[0],
+                css: css[0],
+                js: js[0]
+              });
+            })
           })
-        })
