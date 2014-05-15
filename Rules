@@ -27,7 +27,7 @@ preprocess do
   end.uniq
 
   all_formulas.each do |formula|
-    formula[:titles] = [formula[:title], "Formulas"]
+    formula[:titles] = [formula[:name], "Formulas"]
   end
 
   video_names.each do |item|
