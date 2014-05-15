@@ -10,7 +10,7 @@ kind: formula
 ---
 There are several ways to create a header at the top of the screen in Ionic. Distinct differences exist between the navigation bar and the header bar and their uses within the framework. In this formula, we will create both types and explore the differences while introducing ourselves to Ionic's navigation view.
 
-### A basic header
+## A basic header
 
 Placing a header bar on a view in Ionic is straightforward. The `ion-header-bar` directive lets us create an empty header bar on top of the screen:
 
@@ -41,7 +41,7 @@ This creates an empty orange header bar across the top of the screen. By using t
 
 Now that we have an empty header bar, let's make it much more interesting by adding a title and buttons.
 
-### Colors are great, but it's useless!
+## Colors are great, but it's useless!
 
 Typically, a header bar isn't just a nice orange blob on top of our screen. To make things more visually interesting (and begin adding functionality), let's add a title and some buttons:
 
@@ -65,7 +65,7 @@ The header bar is pretty simple, but there are some drawbacks to its simplicity.
 
 This makes `ion-header-bar` great for simple views that don't need complex state hierarchies, and is the thing to use when all you need is a header (or subheader) attached to any view. When things need to get more complex, that's where Ionic's navigation views and `ion-nav-bar` come into play.
 
-### Navigate... this way
+## Navigate... this way
 
 Our app is now getting more complicated. We now want to dive into a detail view to find more information about prior screens, add detail pages to the detail pages, and other things that make for a useful app. To do this, we refactor our codebase to a simple implemetation of `ion-nav-view`:
 
@@ -123,14 +123,14 @@ In this instance, we will create the simplest possible implementation:
 
 A lot has changed since the last example. We'll break it down into steps.
 
-#### 1. Configure Ionic's router
+## 1. Configure Ionic's router
 
 To activate Ionic's navigation system, we need to configure the router's states. To do this, we setup the states with `$stateProvider`, with `$urlRouterProvider` letting us specify the default route when loading the module. For the uniniated to the router, it includes other options to help make complex tasks simple. To load the template, we specify the file. Angular will search `$templateCache` for this, and only request it if it's not already available in the cache.
 
 In another formula we will go over Ionic's navigation in depth. For now, we will focus on adding a navbar.
 
 
-#### 2. Setup home.html view
+## 2. Setup home.html view
 
 
 To add home.html to the `$templateCache` when initializing Angular,  we add a script of type `text/ng-template` with an id of the page name. Within, we wrap everything within `ion-view`. The title attribute allows us to specify the title of the nav bar. `ion-content` gives a content space under the header where we can begin to place content.
@@ -198,6 +198,6 @@ Adding a detail page, complete with an animated view pushing on top of our old v
 
 Running this, we now have a link that will take us into a detail page, and tapping the back button will return us to our home. Several things make this possible. We have added a detail state by the name of detail, and the `ui-sref` directive on our anchor tag binds the link to the state defined in ui-router. The `ion-nav-back-button` directive inspects the state heirarchy to determine whether or not to display a back button. If the app can go back, the button is rendered, and the reverse is true.
 
-### Contrasting the two
+## Contrasting the two
 
 In the examples above and the scratchpad below, the differences between `ion-header-bar` and `ion-nav-bar` are clear. A standard header bar serves on its own as a pure UI element, ready for extension based on the developer's needs, but doesn't come with the advanced integration into Ionic's router and navigation stack. The nav bar is far more opinionated in its use, but offers a lot of power in return. Explore the scratchpad below to keep learning about the two, or check out the [Ionic documentation](ionicframework.com/docs/) and start building!

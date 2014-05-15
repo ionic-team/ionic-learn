@@ -14,7 +14,7 @@ What is a mobile app without interesting data? It seems nearly every app we use 
 
 Luckily, adding backend functionality to a mobile app is incredibly easy with AngularJS.
 
-### $http
+## $http
 
 Sometimes, all we need to do is make simple, periodic HTTP requests to a remote server. In those cases, the `$http` Angular service is exactly what we need:
  
@@ -59,7 +59,7 @@ In the example above we are using a simple JSON echo server for testing purposes
 
 In future formulas we will see how to do local testing of backend resources using AngularJS Mocks.
 
-### ngResource
+## ngResource
 
 Often our backend data is modelled in a way that naturally fits into the client-side data models in our app. For example, if our app has a list of `Posts` that we show in a stream, a `Post` model becomes a core data element on both the server *and* the client.
 
@@ -136,7 +136,7 @@ To work correctly, our server should return a response similar to this:
 
 ngResource is a powerful module and has a lot of fun functionality. Be sure to take a look at the official [ngResource](https://docs.angularjs.org/api/ngResource/service/$resource) docs for more info. 
 
-### Summary
+## Summary
 
 Interacting with backend data is crucial for most mobile apps, and with AngularJS it's a breeze. For simple backend interactions, the `$http` module lets us do simple HTTP calls to an API end point.
 
