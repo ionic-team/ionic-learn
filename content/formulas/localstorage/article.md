@@ -9,9 +9,9 @@ category: AngularJS
 kind: formula
 ---
 
-Being able to persist data in an app is crucial due to the large variance in mobile network connectivity, and users expect apps to reasonably function regardless of whether they are connected to the web or not.
+Being able to persist data locally in an app is crucial. The large variance in mobile network connectivity and the fact that users expect apps to reasonably function regardless of whether they are connected to the web or not means we need to make sure we store enough data locally to make the app function in these conditions.
 
-Fortunately, with web technologies storing data locally is a snap. 
+Fortunately, with web technologies storing data locally is fast and easy.
 
 ### Local Storage
 
@@ -111,4 +111,4 @@ Since `localStorage` is a very simple way to store String values for keys, it's 
 
 And stay tuned for upcoming [IndexedDB support](http://caniuse.com/indexeddb) in future mobile browsers, which will provide a more comprehensive local database option.
 
-Try the scratchpad below for a runnable demo of this
+Try the scratchpad below for a runnable demo of this:
