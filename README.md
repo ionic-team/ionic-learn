@@ -6,7 +6,7 @@ To start:
 bundle install
 rbenv rehash (if using rbenv)
 nanoc
-nanoc serve
+nanoc view
 
 Open browser to http://localhost:3000
 
