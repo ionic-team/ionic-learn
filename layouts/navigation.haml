@@ -37,9 +37,9 @@
         %a{href: "https://plus.google.com/+Ionicframework/posts", target: "_new"}
           %i.ion-googleplus
           %p Plus
-  %form.email-digest
-    %label{for: 'digest_email'}
+  %form.email-digest{method: 'post', action: 'http://codiqa.createsend.com/t/t/s/thodi/'}
+    %label{for: 'cm-thodi-thodi'}
       %p Sign up for the weekly Learn Digest!
     .digest-wrapper
-      %input{type: 'email', placeholder: 'Email address', name: 'digest_email'}
+      %input{type: 'email', placeholder: 'Email address', name: 'cm-thodi-thodi', required: true}
       %input{type: 'submit', value: 'Go'}
