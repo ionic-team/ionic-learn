@@ -46,6 +46,16 @@
     }
   }
 }
+.email-digest-success {
+  width: 80%;
+  @include horizontal-rule(30px, 30px, #ECF0F6);
+  display: none;
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    color: #848B94;
+  }
+}
 
 .email-digest {
   width: 80%;

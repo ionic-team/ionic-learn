@@ -49,4 +49,19 @@ $(function() {
   });
 
   $('span.difficulty').tooltip({});
+
+  $('.email-digest').on('submit', function(e) {
+    e.preventDefault();
+    var $this = $(this)
+
+    $this.fadeOut()
+    $this.find('input[type=submit]').attr('disabled', 'disabled')
+    var dfd = $.getJSON($this.attr('action') + "?callback=?", $this.serialize())
+
+    dfd.done(function(res) {
+      $this.promise().done(function() {
+        $('.email-digest-success').fadeIn()
+      })
+    })
+  })
 });
