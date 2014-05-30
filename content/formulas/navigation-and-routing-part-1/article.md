@@ -75,7 +75,7 @@ We can also use outside templates to keep markup out of our code.
 ~~~js
 $stateProvider.state('home', {
   url: '/',
-  templateUrl: 'home.js'
+  templateUrl: 'home.html'
 })
 ~~~
 
