@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+
+  <head>
+    <link data-require="ionic@1.0.0-beta6" data-semver="1.0.0-beta6" rel="stylesheet" href="http://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" />
+    <script data-require="ionic@1.0.0-beta6" data-semver="1.0.0-beta6" src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+
+    <ion-nav-bar class="bar-positive">
+    </ion-nav-bar>
+    <ion-tabs class="tabs-positive">
+      <ion-tab icon="ion-home" ui-sref="home">
+        <ion-nav-view name="home"></ion-nav-view>
+      </ion-tab>
+      <ion-tab icon="ion-help" ui-sref="help">
+        <ion-nav-view name="help"></ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+
+    <script type="text/ng-template" id="home.html">
+      <ion-view title="Home">
+        <ion-content padding="true">
+          <h2>Home Page</h2>
+          <p>Here's the main route for the app.</p>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script type="text/ng-template" id="help.html">
+      <ion-view title="Help">
+        <ion-content padding="true">
+           <h2>Using the app</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis architecto hic officia quasi excepturi sequi deleniti maiores consectetur veritatis sint?</p>
+        </ion-content>
+      </ion-view>
+    </script>
+  </body>
+</html>
