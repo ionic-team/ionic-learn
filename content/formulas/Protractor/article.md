@@ -216,9 +216,9 @@ exports.config = {
 		isVerbose: true,
 	  },
 	allScriptsTimeout: 20000,
-  	onPrepare: function(){
-  		// This will use cordova 3.0.0 and iPhone5 device in ripple, modify
-  		// as needed.
+	onPrepare: function(){
+		// This will use cordova 3.0.0 and iPhone5 
+		// device in ripple, modify as needed.
 		browser.driver.get('http://localhost:4400/?enableripple=cordova-3.0.0-iPhone5');
 	}
 };
@@ -254,8 +254,9 @@ exports.config = {
 		// Enable this if you get syntonization errors from protractor, 
 		// var ptor = protractor.getInstance();
 		// ptor.ignoreSynchronization = true;   
+		
 		// Allow ripple to load
-      		browser.sleep(2000);
+    browser.sleep(2000);
 		browser.driver.switchTo().frame(0);
 	}
 };
