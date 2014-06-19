@@ -9,8 +9,6 @@ reading_time: 20
 category: Testing
 kind: formula
 ---
-# Protractor e2e Testing
-###### *Using Protractor to test ionic*
 
 ## Preparing to test
 Start by ensuring protractor is installed.
@@ -31,23 +29,20 @@ Now you are ready to test!
 
 Create a folder for your tests in your project, this example will use `YourProject/test/`.
 
-```
+~~~
 cd YourProject
 cd test
-```
+~~~
 
 Create a protractor config file, example: `protractor.config.js`.
 
-```
+~~~
 touch protractor.config.js
-```
+~~~
 
 Add the following to `protractor.config.js`:
 
-```javascript
-'use strict';
-// An example configuration file.
-/* global protractor */
+~~~js
 exports.config = {
 	  capabilities: {
 	  	// You can use other browsers
@@ -68,7 +63,7 @@ exports.config = {
 		browser.driver.get('http://localhost:3000');
 	}
 };
-```
+~~~
 
 For more on protractor configuration see [here](https://sourcegraph.com/github.com/exratione/protractor-selenium-server-vagrant/symbols/javascript/commonjs/test/protractor.conf.base.js/-/config).
 
@@ -77,21 +72,21 @@ For more on protractor configuration see [here](https://sourcegraph.com/github.c
 
 Create a folder to house your end to end tests, example: `e2e`.
 
-```
+~~~
 mkdir e2e
-```
+~~~
 
 Create your first test
 
-```
+~~~
 touch e2e/becomeAwesome.spec.js
-```
+~~~
 
 *Tests in protractor heavily rely on [promises](https://github.com/kriskowal/q#tutorial) and use [jasmine 1.3](http://jasmine.github.io/1.3/introduction.html). Its recommended that you understand the basics of these in order to write better tests.*
 
 Our example page will look like this:
 
-```
+~~~
 <html>
 	<head><!-- Include angularjs and all your awesome things--></head>
 	<body>
@@ -104,12 +99,11 @@ Our example page will look like this:
 		});
 	</script>
 </html>
-```
+~~~
 
 Start with a basic descripe-it test in the file `e2e/becomeAwesome.spec.js`.
 
-```javascript
-'use strict'
+~~~js
 // Describe a feature
 describe('Becoming Awesome', function(){
 	it('should start out not very awesome', function(){
@@ -124,13 +118,13 @@ describe('Becoming Awesome', function(){
 		expect(awesomeStatus.getText()).toContain('I am awesome');
 	});
 });
-```
+~~~
 
 Now we are ready to run our test
 
-```
+~~~
 protractor protractor.config.js
-```
+~~~
 
 Protractor should automatically spin up a selenium server for you, then connect to it and a chrome window should pop up, click the awesome button, then fade away.
 
@@ -140,8 +134,7 @@ Your console should display that all of the tests have passed.
 
 Unfortunately, writing tests is still programming, as such is prone to it's own errors, so debugging is necessary. Lets says you screwed up **real bad**, and there is a subtle typo in your test.
 
-```javascript
-'use strict'
+~~~js
 // Describe a feature
 describe('Becoming Awesome', function(){
 	it('should start out not very awesome', function(){
@@ -157,14 +150,13 @@ describe('Becoming Awesome', function(){
 		expect(awesomeStatus.getText()).toContain('I am awesome');
 	});
 });
-```
+~~~
 
 Because your test is *sooo* complicated, you are having a hard time figuring out whats causing the problem. 
 
 Because of our misguided finger problem, and too-tired-to-see-the-typo eyes, all we know is that the test can't complete this line `element(by.id('awesomeTypo')).click();`. Here is where debugging comes in.
 
-```javascript
-'use strict'
+~~~js
 // Describe a feature
 describe('Becoming Awesome', function(){
 	it('should start out not very awesome', function(){
@@ -182,13 +174,13 @@ describe('Becoming Awesome', function(){
 		expect(awesomeStatus.getText()).toContain('I am awesome');
 	});
 });
-```
+~~~
 
 Run protractor in debug mode with 
 
-```
+~~~
 protractor debug protractor.config.js
-```
+~~~
 
 The browser should stop when it reaches the `browser.debugger();` statement.
 
@@ -198,18 +190,16 @@ Now using your incredibly awesome powers of deduction, caffeine rejuvenated eyes
 Chances are your app takes advantages of some of the Cordova plugins and the like and the vanilla browser probably didn't work to well for testing those features. We can use ripple to emulate them!
 
 Start by installing ripple-emulator and running it
-```
+
+~~~
 npm install -g ripple-emulator
 cd YourApp
 ripple emulate
-```
+~~~
 
 Update `test/protractor.config.js` file to use the ripple server port
 
-```javascript
-'use strict';
-// An example configuration file.
-/* global protractor */
+~~~js
 exports.config = {
 	  capabilities: {
 	  	// You can use other browsers
@@ -232,19 +222,16 @@ exports.config = {
 		browser.driver.get('http://localhost:4400/?enableripple=cordova-3.0.0-iPhone5');
 	}
 };
-```
+~~~
 
 Now run protractor
 
-```
+~~~
 protractor protractor.config.js
-```
+~~~
 You will notice that your tests run into some problems right away. Thats because ripple doesn't use angular, and loads your app into an iframe. There are two things we need to do to correct these issues. Update `test/protractor.config.js` to match this:
 
-```javascript
-'use strict';
-// An example configuration file.
-/* global protractor */
+~~~js
 exports.config = {
 	  capabilities: {
 	  	// You can use other browsers
@@ -272,7 +259,7 @@ exports.config = {
 		browser.driver.switchTo().frame(0);
 	}
 };
-```
+~~~
 
 Your tests should run the same after the modifications, except for now they are inside a ripple emulator testing out all that sweet sweet Cordova functionality.
 
