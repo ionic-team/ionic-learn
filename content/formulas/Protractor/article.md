@@ -6,7 +6,7 @@ date: June 18, 2014
 description: Creating end to end tests can save you tons of headache and embarrassment. Creating the initial tests will take time, however, you will spend less time in the future testing every part of your app by hand. This formula demonstrates the basics of testing with protractor and Ionic, and using ripple in your end to end tests.
 difficulty: intermediate
 reading_time: 20
-category: AngularJS
+category: Testing
 kind: formula
 ---
 # Protractor e2e Testing
@@ -100,7 +100,8 @@ Our example page will look like this:
 	</body>
 	<script type='text/javascript'>
 		$('#becomeAwesome').on('click', function(){
-			$('awesomeStatus').html('I am awesome')		});
+			$('awesomeStatus').html('I am awesome')
+		});
 	</script>
 </html>
 ```
@@ -113,12 +114,16 @@ Start with a basic descripe-it test in the file `e2e/becomeAwesome.spec.js`.
 describe('Becoming Awesome', function(){
 	it('should start out not very awesome', function(){
 		var awesomeStatus = element(by.id('awesomeStatus'));
-		expect(awesomeStatus.getText()).toContain('I am not awesome');	});
+		expect(awesomeStatus.getText()).toContain('I am not awesome');
+	});
 	it('should become awesome', function(){
-		element(by.id('becomeAwesome')).click();	});
+		element(by.id('becomeAwesome')).click();
+	});
 	it('should be awesome', function(){
 		var awesomeStatus = element(by.id('awesomeStatus'));
-		expect(awesomeStatus.getText()).toContain('I am awesome');	});});
+		expect(awesomeStatus.getText()).toContain('I am awesome');
+	});
+});
 ```
 
 Now we are ready to run our test
@@ -141,13 +146,17 @@ Unfortunately, writing tests is still programming, as such is prone to it's own 
 describe('Becoming Awesome', function(){
 	it('should start out not very awesome', function(){
 		var awesomeStatus = element(by.id('awesomeStatus'));
-		expect(awesomeStatus.getText()).toContain('I am not awesome');	});
+		expect(awesomeStatus.getText()).toContain('I am not awesome');
+	});
 	it('should become awesome', function(){
 		// This typo will cause the test to fail!
-		element(by.id('awesomeTypo')).click();	});
+		element(by.id('awesomeTypo')).click();
+	});
 	it('should be awesome', function(){
 		var awesomeStatus = element(by.id('awesomeStatus'));
-		expect(awesomeStatus.getText()).toContain('I am awesome');	});});
+		expect(awesomeStatus.getText()).toContain('I am awesome');
+	});
+});
 ```
 
 Because your test is *sooo* complicated, you are having a hard time figuring out whats causing the problem. 
@@ -160,15 +169,19 @@ Because of our misguided finger problem, and too-tired-to-see-the-typo eyes, all
 describe('Becoming Awesome', function(){
 	it('should start out not very awesome', function(){
 		var awesomeStatus = element(by.id('awesomeStatus'));
-		expect(awesomeStatus.getText()).toContain('I am not awesome');	});
+		expect(awesomeStatus.getText()).toContain('I am not awesome');
+	});
 	it('should become awesome', function(){
 		 // Inserting a debugger statement here
 		 // causes the browser to stop when it reaches this line.
 		browser.debugger();
-		element(by.id('awesomeTypo')).click();	});
+		element(by.id('awesomeTypo')).click();
+	});
 	it('should be awesome', function(){
 		var awesomeStatus = element(by.id('awesomeStatus'));
-		expect(awesomeStatus.getText()).toContain('I am awesome');	});});
+		expect(awesomeStatus.getText()).toContain('I am awesome');
+	});
+});
 ```
 
 Run protractor in debug mode with 
