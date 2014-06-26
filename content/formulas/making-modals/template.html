@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="http://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" />
+    <script src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="ionicApp">
+    <ion-header-bar class="bar-energized">
+      <h1 class="title">Contact Info</h1>
+    </ion-header-bar>
+    <ion-content>
+    <div class="card" ng-controller='MainCtrl' ng-click="openModal()">
+      <div class="item item-divider">
+        {{contact.name}}
+      </div>
+      <div class="item item-text-wrap">
+        {{contact.info}}
+      </div>
+    </div>
+    </ion-content>
+
+  <script id="contact-modal.html" type="text/ng-template">
+    <div class="modal">
+      <ion-header-bar>
+        <h1 class="title">Edit Contact</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Name</span>
+            <input type="text" ng-model="contact.name">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Info</span>
+            <input type="text" ng-model="contact.info">
+          </label>
+        </div>
+
+        <button class="button button-full button-energized" ng-click="closeModal()">Done</button>
+      </ion-content>
+    </div>
+  </script>
+  </body>
+
+</html>
