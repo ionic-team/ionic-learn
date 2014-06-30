@@ -1,7 +1,7 @@
 ---
 name: Making Modals
 author: Gerred Dillon
-date: June 26, 2014
+date: June 30, 2014
 description: Modals are an essential UI component of any app needing to show a detail view. This formula goes into the details of making those modals.
 difficulty: beginner
 reading_time: 10
