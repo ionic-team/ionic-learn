@@ -1,9 +1,9 @@
 ---
-name: "Installing Cordova and the Android SDK on Windows 7/8"
+name: "Installing Cordova and the Android SDK on Windows 7 and 8"
 author: Max Lynch
 date: June 30, 2014
 difficulty: beginner
-embed_code: //www.youtube.com/embed/RNrNIHQ9cWo
+embed_code: //www.youtube.com/embed/RNrNIHQ9cWo?hd=1
 length: 14
 description: A walkthrough on installing Cordova, Android, and Ionic on Windows 7 and 8
 live: true

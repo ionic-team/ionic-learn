@@ -3,11 +3,17 @@
     %nav
       %a.left{href: @items['/videos/'].path}
         %i.ion-chevron-left
-        %span{:style => "margin-left:-5px;"} All Videos
+        %span{:style => "margin-left:0px;"} All Videos
     %article
       %header
         %h1=@item[:name]
         =author(@item[:author]).compiled_content
+        %div.social-buttons
+          -if @item[:tweet]
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="#{@item[:tweet]}" data-via="ionicframework" data-related="ionicframework">Tweet</a>
+          -else
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="ionicframework" data-related="ionicframework">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         %p.description=@item[:description]
       %iframe{allowfullscreen: "", frameborder: "0", height: "505", src: @item[:embed_code], width: "847"}
       %ul.nav.nav-tabs
