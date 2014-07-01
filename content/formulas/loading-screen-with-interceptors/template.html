@@ -8,10 +8,13 @@
     <script src="script.js"></script>
   </head>
 
-  <body>
-    <ion-nav-view>
+  <body ng-controller="MainCtrl as main">
+    <ion-content>
+      <ion-list>
+        <ion-item ng-repeat="brewery in main.breweries track by $index">{{brewery.name}}</ion-item>
+      </ion-list>
+    </ion-content>
 
-    </ion-nav-view>
   </body>
 
 </html>
