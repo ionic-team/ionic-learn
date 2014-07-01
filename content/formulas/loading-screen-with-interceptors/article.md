@@ -7,7 +7,6 @@ difficulty: advanced
 reading_time: 10
 category: Advanced Angular
 kind: formula
-draft: true
 ---
 
 ## Showing a loading screen
