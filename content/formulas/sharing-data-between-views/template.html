@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='ionicApp'>
+
+  <head>
+    <link data-require="ionic@1.0.0-beta6" data-semver="1.0.0-beta6" rel="stylesheet" href="http://code.ionicframework.com/1.0.0-beta.6/css/ionic.css" />
+    <script data-require="ionic@1.0.0-beta6" data-semver="1.0.0-beta6" src="http://code.ionicframework.com/1.0.0-beta.6/js/ionic.bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <ion-nav-bar class='bar-positive'>
+      <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+    <script type="text/ng-template" id="todos.html">
+      <ion-view title="Todos">
+        <ion-content>
+          <ion-list>
+            <ion-item ng-repeat="todo in todos" ui-sref='todo({todoId: todo.id})' ng-class='{done: todo.done}'>{{todo.name}}</ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script type="text/ng-template" id="todo.html">
+      <ion-view title="Edit Todo">
+        <ion-content>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Name</span>
+              <input type="text" ng-model="todo.name">
+            </label>
+            <ion-toggle ng-model="todo.done" toggle-class="toggle-calm">Done</ion-toggle>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+  </body>
+
+</html>
