@@ -130,3 +130,13 @@ Even better if you do it in the `resolve` step within your routing layer. This i
 ## Parting Words
 
 Having direct control of your splash screen is an important part in creating that final polish over your application. Try it out, and let us know what you think!
+
+## Update for PhoneGap Build
+
+Per [@andrewmcgivery](https://twitter.com/andrewmcgivery), the configuration for disabling auto-hide is slightly different on PhoneGap Build. When configuring your PhoneGap Build app, the preference you need is:
+
+~~~xml
+<preference name="auto-hide-splash-screen" value="false" />
+~~~
+
+Thanks for the info, Andrew!
