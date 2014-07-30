@@ -61,13 +61,13 @@ Running this, we now have a view much more familiar to anybody who has used an a
 
 That's the basics of `ion-header-bar`. There are a [lot of ways](http://ionicframework.com/docs/api/directive/ionHeaderBar/) to customize the header as your own.
 
-The header bar is pretty simple, but there are some drawbacks to its simplicity. Ionic contains a full routing system built on ui-router that manages an app's navigation stack, letting users dive deep into nested views without losing their state elsewhere in the app. `ion-header-bar` is a UI directive and doesn't intregate other functions of Ionic on its own.
+The header bar is pretty simple, but there are some drawbacks to its simplicity. Ionic contains a full routing system built on ui-router that manages an app's navigation stack, letting users dive deep into nested views without losing their state elsewhere in the app. `ion-header-bar` is a UI directive and doesn't integrate other functions of Ionic on its own.
 
 This makes `ion-header-bar` great for simple views that don't need complex state hierarchies, and is the thing to use when all you need is a header (or subheader) attached to any view. When things need to get more complex, that's where Ionic's navigation views and `ion-nav-bar` come into play.
 
 ## Navigate... this way
 
-Our app is now getting more complicated. We now want to dive into a detail view to find more information about prior screens, add detail pages to the detail pages, and other things that make for a useful app. To do this, we refactor our codebase to a simple implemetation of `ion-nav-view`:
+Our app is now getting more complicated. We now want to dive into a detail view to find more information about prior screens, add detail pages to the detail pages, and other things that make for a useful app. To do this, we refactor our codebase to a simple implementation of `ion-nav-view`:
 
 ~~~html
 <body ng-app="ionicApp">
@@ -125,7 +125,7 @@ A lot has changed since the last example. We'll break it down into steps.
 
 ## 1. Configure Ionic's router
 
-To activate Ionic's navigation system, we need to configure the router's states. To do this, we setup the states with `$stateProvider`, with `$urlRouterProvider` letting us specify the default route when loading the module. For the uniniated to the router, it includes other options to help make complex tasks simple. To load the template, we specify the file. Angular will search `$templateCache` for this, and only request it if it's not already available in the cache.
+To activate Ionic's navigation system, we need to configure the router's states. To do this, we setup the states with `$stateProvider`, with `$urlRouterProvider` letting us specify the default route when loading the module. For the uninitiated to the router, it includes other options to help make complex tasks simple. To load the template, we specify the file. Angular will search `$templateCache` for this, and only request it if it's not already available in the cache.
 
 In another formula we will go over Ionic's navigation in depth. For now, we will focus on adding a navbar.
 
@@ -135,7 +135,7 @@ In another formula we will go over Ionic's navigation in depth. For now, we will
 
 To add home.html to the `$templateCache` when initializing Angular,  we add a script of type `text/ng-template` with an id of the page name. Within, we wrap everything within `ion-view`. The title attribute allows us to specify the title of the nav bar. `ion-content` gives a content space under the header where we can begin to place content.
 
-Like that, we now have a state-aware header! This opens up a lot of possibilities to write easy, declarative markup to generate incredibly complex UIs. From here, it is pretty straightforward to start creating interesting state heirarchies.
+Like that, we now have a state-aware header! This opens up a lot of possibilities to write easy, declarative markup to generate incredibly complex UIs. From here, it is pretty straightforward to start creating interesting state hierarchies.
 
 ### Navigating deep waters
 
@@ -196,7 +196,7 @@ Adding a detail page, complete with an animated view pushing on top of our old v
 </html>
 ~~~
 
-Running this, we now have a link that will take us into a detail page, and tapping the back button will return us to our home. Several things make this possible. We have added a detail state by the name of detail, and the `ui-sref` directive on our anchor tag binds the link to the state defined in ui-router. The `ion-nav-back-button` directive inspects the state heirarchy to determine whether or not to display a back button. If the app can go back, the button is rendered, and the reverse is true.
+Running this, we now have a link that will take us into a detail page, and tapping the back button will return us to our home. Several things make this possible. We have added a detail state by the name of detail, and the `ui-sref` directive on our anchor tag binds the link to the state defined in ui-router. The `ion-nav-back-button` directive inspects the state hierarchy to determine whether or not to display a back button. If the app can go back, the button is rendered, and the reverse is true.
 
 ## Contrasting the two
 
