@@ -28,11 +28,11 @@
                 .similar-item
                   %a{href: a.path}=a[:name]
                   %p=a[:description]
-              -unless b.nil?
-                .rule
-                .similar-item
-                  %a{href: b.path}=b[:name]
-                  %p=b[:description]
+                -unless b.nil?
+                  .rule
+                  .similar-item
+                    %a{href: b.path}=b[:name]
+                    %p=b[:description]
 
     -if @item[:comments] == true
       <div id="disqus_thread"></div>
@@ -46,7 +46,7 @@
               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
           })();
-    
+
     -unless @item[:scratchpad] == false
       -content_for :javascripts do
         :javascript
