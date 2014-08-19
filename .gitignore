@@ -4,3 +4,5 @@ crash.log
 .DS_Store
 output/
 *.sw*
+
+.idea/
