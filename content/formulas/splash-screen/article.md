@@ -110,7 +110,7 @@ Now that the splash screen is installed, let's hide it on completion of some tas
 ~~~js
 app.run(function($cordovaSplashScreen) {
   setTimeout(function() {
-    $cordovaSplashScreen.hide()
+    $cordovaSplashscreen.hide()
   }, 5000)
 })
 ~~~
@@ -120,7 +120,7 @@ More likely, you will want to do it on resolution of some promise:
 ~~~js
 app.run(function(MyDataService) {
   MyDataService.getThings().then(function(data) {
-    $cordovaSplashScreen.hide()
+    $cordovaSplashscreen.hide()
   })
 })
 ~~~
