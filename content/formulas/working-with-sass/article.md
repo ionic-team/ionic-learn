@@ -11,11 +11,11 @@ scratchpad: false
 ---
 
 
-### Sass Customization
+## Sass Customization
 
 In my last video, I went over the steps on how to set up Sass for an Ionic project. Now, let’s look at how you can override the variables in Ionic to make the colors your own.
 
-### Setup
+## Setup
 
 Let’s start a new Ionic project using Sass.
 
@@ -111,7 +111,7 @@ $positive:                        #057b6c !default;
 
 Save the file, and the app will instantly be updated. With one simple change, the entire feel of the app has changed. Pretty powerful stuff, huh? So, let’s add a little bit more to this.
 
-### Custom Scroll Background
+## Custom Scroll Background
 
 Changing the background of the scroll-view can be a nice touch that enhances the look and feel of an app. To do this, we’ll change the background to an image, using a variable. The variable will be the location of the image. For this example, we can use a placeholder image:
 
@@ -138,5 +138,5 @@ Now our `ion-content` has a great background image, and our content is teal.
 
 
 
-### Parting Words
+## Parting Words
 While this example only scratches the surface of working with Sass, it’s obvious how powerful it is. A developer only has to touch a few lines of code to completely change the look and feel of an app. I’d highly suggest learning more Sass to speed up your CSS development.
