@@ -119,15 +119,16 @@ Changing the background of the scroll-view can be a nice touch that enhances the
 $big-bg:      'http://ioniconf.com/img/bg.jpg';
 ~~~
 
-With this, we can set the background image to our `ion-content` by simply adding this:
+With this, we can create a class that uses the variable:
 
 ~~~scss
 .scroll-bg {
   background: url($big-bg) no-repeat center center fixed;
   background-size: cover;
 }
-
 ~~~
+
+Then, we'll add that class to `ion-content`:
 
 ~~~html
 <ion-content class="padding scroll-bg">…</ion-content>
