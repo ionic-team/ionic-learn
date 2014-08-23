@@ -123,7 +123,7 @@ With this, we can set the background image to our `ion-content` by simply adding
 
 ~~~scss
 .scroll-bg {
-  background: ($big-bg) no-repeat center center fixed;
+  background: url($big-bg) no-repeat center center fixed;
   background-size: cover;
 }
 
