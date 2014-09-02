@@ -108,7 +108,7 @@ var app = angular.module('ionicApp', ['ionic', 'ngCordova'])
 Now that the splash screen is installed, let's hide it on completion of some task. In this case, we will do it 5 seconds after running:
 
 ~~~js
-app.run(function($cordovaSplashScreen) {
+app.run(function($cordovaSplashscreen) {
   setTimeout(function() {
     $cordovaSplashscreen.hide()
   }, 5000)
