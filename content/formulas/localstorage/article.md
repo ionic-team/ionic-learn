@@ -69,7 +69,7 @@ Using `window.localStorage` directly is just fine, but having to set and parse S
 ~~~js
 angular.module('ionic.utils', [])
 
-.factory('localstorage', ['$window', function($window) {
+.factory('$localstorage', ['$window', function($window) {
   return {
     set: function(key, value) {
       $window.localStorage[key] = value;
@@ -100,7 +100,7 @@ angular.module('app', ['ionic', 'ionic.utils'])
     name: 'Thoughts',
     text: 'Today was a good day'
   });
-  
+
   var post = $localstorage.getObject('post');
   console.log(post);
 });
