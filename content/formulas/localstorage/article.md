@@ -45,7 +45,7 @@ window.localStorage['post'] = JSON.stringify(post);
 var post = JSON.parse(window.localStorage['post'] || '{}');
 ~~~
 
-the `post` variable will now contain the full object. The same can be done for arrays or any other object!
+the `post` variable will now contain the full object. In fact, the same can be done for any kind of data: booleans, strings, numbers, arrays, and objects all serialize to and from JSON perfectly!
 
 ## iCloud Backup
 
@@ -64,7 +64,7 @@ To make sure data stored in `localStorage` does not get backed up to iCloud and 
 
 ## AngularJS Service
 
-Using `window.localStorage` directly is just fine, but having to set and parse Strings gets tiresome after a while. Use this simple AngularJS service for setting and retrieving strings or objects easily:
+Using `window.localStorage` directly is just fine, but having to set and parse Strings gets tiresome after a while. Use this simple AngularJS service for setting and retrieving data easily:
 
 ~~~js
 angular.module('ionic.utils', [])
@@ -72,18 +72,11 @@ angular.module('ionic.utils', [])
 .factory('localstorage', ['$window', function($window) {
   return {
     set: function(key, value) {
-      $window.localStorage[key] = value;
-    },
-    get: function(key, defaultValue) {
-      return $window.localStorage[key] || defaultValue;
-    },
-    setObject: function(key, value) {
       $window.localStorage[key] = JSON.stringify(value);
     },
-    getObject: function(key) {
+    get: function(key, defaultValue) {
       return JSON.parse($window.localStorage[key] || '{}');
     }
-  }
 }]);
 ~~~
 
@@ -93,22 +86,23 @@ And to use this service, just inject the `$localstorage` service into a controll
 angular.module('app', ['ionic', 'ionic.utils'])
 
 .run(function($localstorage) {
-
   $localstorage.set('name', 'Max');
+  
   console.log($localstorage.get('name'));
-  $localstorage.setObject('post', {
+  
+  $localstorage.set('post', {
     name: 'Thoughts',
     text: 'Today was a good day'
   });
   
-  var post = $localstorage.getObject('post');
+  var post = $localstorage.get('post');
   console.log(post);
 });
 ~~~
 
 ## Suggestions
 
-Since `localStorage` is a very simple way to store String values for keys, it's no substitue for a real database. I suggest using Local Storage to persist a small number of larger objects.
+Since Local Storage is a key-value store and can only store strings, it's no substitute for a real database. While encoding to and from JSON works great for most scenarios, frequent queries of large amounts of data can expose Local Storage’s weaknesses. We suggest using Local Storage to persist a small number of larger objects.
 
 And stay tuned for upcoming [IndexedDB support](http://caniuse.com/indexeddb) in future mobile browsers, which will provide a more comprehensive local database option.
 
