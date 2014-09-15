@@ -24,6 +24,7 @@ $ ionic start CustomSass blank && cd CustomSass
 $ ionic setup sass
 ~~~
 
+
 Now that we have Sass’s dependencies installed, let’s open up `ionic.app.scss` in the scss folder. By default, Ionic comes with these nine Sass variables:
 
 ~~~scss
