@@ -76,7 +76,7 @@ There's a lot of useful stuff here, but let's focus on what we need. For iOS, th
 
 Even though a custom splash screen is an important way to polish your app, it may not be enough. For applications that download a lot of data, or perform other operations, more control might be necessary over the display and hiding of the splash screen.
 
-Before we install ngCordova, let's make sure the splash screen doesn't auto-hide. Inside of `platforms/ios/cordova/lib/defaults.xml`, find the `AutoHideSplashScreen` and set it to false. There are other configuration options in here that are powerful, but we will cover these later.
+Before we install ngCordova, let's make sure the splash screen doesn't auto-hide. In your `config.xml`, adding `<preference name="AutoHideSplashScreen" value="false" />` will do this.
 
 If you run the app with `ionic emulate ios`, the splash screen will now stay up forever. Let's install the splash screen plugin, and add `ngCordova` to our application to have control over this.
 
