@@ -56,7 +56,7 @@ gulp.task('less', function(done) {
   
   gulp.src('./less/ionic.app.less')
     .pipe(less({
-      //plugins: [ionicless, autoprefix]
+      plugins: [ionicless, autoprefix]
       }))
     .pipe(gulp.dest('./www/css/'))
     .pipe(minifyCss({
