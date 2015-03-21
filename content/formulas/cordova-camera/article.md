@@ -68,7 +68,7 @@ function takePicture() {
 
 This will prompt the user to take a photo, and will return the local URL of the image that you can then use inside of an `<img>` tag or use for a CSS background image.
 
-`cameraOptions` is an optional object that allows you to configure many aspects of the camera operation. They are too numerous to list here, so be sure to take a look at the [Camera Plugin Docs](https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md) for a full list of the available features and options of the Camera plugin.
+`cameraOptions` is an optional object that allows you to configure many aspects of the camera operation. They are too numerous to list here, so be sure to take a look at the [Camera Plugin Docs](https://github.com/apache/cordova-plugin-camera/) for a full list of the available features and options of the Camera plugin.
 
 ## AngularJS Service
 
