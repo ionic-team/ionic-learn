@@ -28,9 +28,9 @@ var app = angular.module('ionicApp', ['ionic', 'ngCordova'])
 app.run(function($cordovaStatusbar) {
   $cordovaStatusbar.overlaysWebView(true)
 
-  $cordovaStatusBar.style(1) //Light
-  $cordovaStatusBar.style(2) //Black, transulcent
-  $cordovaStatusBar.style(3) //Black, opaque
+  $cordovaStatusbar.style(1) //Light
+  $cordovaStatusbar.style(2) //Black, transulcent
+  $cordovaStatusbar.style(3) //Black, opaque
 })
 ~~~
 
