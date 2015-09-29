@@ -18,7 +18,7 @@ To customize the status bar in an Ionic application, we can use the Cordova stat
 cordova plugin add org.apache.cordova.statusbar
 ~~~
 
-From there, with the [ngCordova](http://ngcordova.com/) module installed, we get a new service called `$cordovaStatusBar` exposed to our controllers.
+From there, with the [ngCordova](http://ngcordova.com/) module installed, we get a new service called `$cordovaStatusbar` exposed to our controllers.
 
 For example, we can adjust the base style of our status bar:
 
@@ -28,9 +28,9 @@ var app = angular.module('ionicApp', ['ionic', 'ngCordova'])
 app.run(function($cordovaStatusbar) {
   $cordovaStatusbar.overlaysWebView(true)
 
-  $cordovaStatusBar.style(1) //Light
-  $cordovaStatusBar.style(2) //Black, transulcent
-  $cordovaStatusBar.style(3) //Black, opaque
+  $cordovaStatusbar.style(1) //Light
+  $cordovaStatusbar.style(2) //Black, transulcent
+  $cordovaStatusbar.style(3) //Black, opaque
 })
 ~~~
 
