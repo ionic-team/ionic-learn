@@ -1,3 +1,8 @@
+# Depreciated
+
+The content on this site is outdated and no longer maintained. It is left her for reference purposes only.
+
+
 # Ionic Learn
 
 To start:
