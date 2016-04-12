@@ -101,7 +101,7 @@ Our example page will look like this:
 </html>
 ~~~
 
-Start with a basic descripe-it test in the file `e2e/becomeAwesome.spec.js`.
+Start with a basic describe-it test in the file `e2e/becomeAwesome.spec.js`.
 
 ~~~js
 // Describe a feature
