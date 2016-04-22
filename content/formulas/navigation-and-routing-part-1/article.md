@@ -144,7 +144,7 @@ Let's not forget about our templates. Add these in at the end of the `body`:
 </script>
 
 <script type="text/ng-template" id="help.html">
-  <ion-view title="Home">
+  <ion-view title="Help">
     <ion-content padding="true">
        <h2>Using the app</h2>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis architecto hic officia quasi excepturi sequi deleniti maiores consectetur veritatis sint?</p>
