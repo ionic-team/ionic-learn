@@ -17,7 +17,7 @@ Start by ensuring protractor is installed.
 
 Use the web manager to install the chrome-driver and selenium server.
 
-`web-driver update`
+`webdriver-manager update`
 
 Spin up an Ionic server
 
